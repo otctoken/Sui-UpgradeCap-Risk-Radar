@@ -1,0 +1,5 @@
+{
+  "name": "Sui UpgradeCap Risk Radar",
+  "description": "A dashboard for visualizing smart contract upgrade risks in the Sui ecosystem, analyzing ownership, policies, and timelocks.",
+  "requestFramePermissions": []
+}

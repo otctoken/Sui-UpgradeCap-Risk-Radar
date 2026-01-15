@@ -1,0 +1,55 @@
+// Upgrade Policies in Sui Move
+export enum UpgradePolicy {
+  Compatible = 0, // Code can change, existing data compatible
+  Additive = 128, // Can only add new functions/structs
+  DepOnly = 255,  // Dependency only (effectively immutable logic for existing modules)
+}
+
+// Ownership structures
+export enum OwnershipType {
+  Single = 'Single Address',
+  MultiSig = 'MultiSig',
+  SharedTimelock = 'Timelock / DAO', // Renamed for display preference
+  Immutable = 'Burned / Immutable',
+}
+
+// Risk Level Definition
+export type RiskLevel = 'Low' | 'Medium-Low' | 'Medium' | 'High';
+
+// The core data structure for a DApp
+export interface DAppRiskProfile {
+  id: string;
+  name: string;
+  description: string;
+  category: 'DeFi' | 'NFT' | 'GameFi' | 'Infrastructure' | 'Meme';
+  logoUrl: string;
+  
+  // Risk Factors
+  policy: UpgradePolicy;
+  ownershipType: OwnershipType;
+  
+  // Addresses for linking (New)
+  controllerAddress?: string;     // The address holding the UpgradeCap
+  customPolicyAddress?: string;   // The address of the custom policy package/object (if exists)
+  timelockAddress?: string;       // The address of the timelock object (if exists)
+  sourceCodeUrl?: string;         // Link to explorer or repo
+
+  // Metadata for scoring
+  multiSigThreshold?: string; // e.g., "3/5"
+  timelockDurationSeconds: number; // 0 if no timelock
+  lastUpgradeDate: string; // ISO Date
+  version: number; // Package version
+  isVerified: boolean; // Source code verified on Explorer
+}
+
+// For calculating the score breakdown
+export interface RiskScoreBreakdown {
+  total: number;
+  upgradeCapScore: number;
+  controllerScore: number;
+  policyScore: number;
+  delayedUpgradeScore: number;
+  stabilityScore: number;
+  sourceCodeScore: number;
+  riskLevel: RiskLevel;
+}

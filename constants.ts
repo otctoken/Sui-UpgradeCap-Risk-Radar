@@ -1,3 +1,4 @@
+import { Flag } from 'lucide-react';
 import { DAppRiskProfile, UpgradePolicy, OwnershipType } from './types';
 
 export const MOCK_DAPPS: DAppRiskProfile[] = [
@@ -22,7 +23,7 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
     description: 'Central limit order book with DAO governance.',
     category: 'DeFi',
     logoUrl: 'https://picsum.photos/64/64?random=2',
-    policy: UpgradePolicy.Compatible, 
+    policy: UpgradePolicy.Compatible,
     ownershipType: OwnershipType.SharedTimelock, // DAO
     timelockDurationSeconds: 172800, // 48 Hours
     lastUpgradeDate: '2024-01-15',
@@ -43,7 +44,7 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
     ownershipType: OwnershipType.Single,
     timelockDurationSeconds: 0,
     lastUpgradeDate: '2024-03-10',
-    version: 52, 
+    version: 52,
     isVerified: false, // Unverified
     controllerAddress: '0xbad...actor',
     // No policy, no timelock, no source link
@@ -57,7 +58,7 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
     policy: UpgradePolicy.Additive,
     ownershipType: OwnershipType.MultiSig,
     multiSigThreshold: '3/5',
-    timelockDurationSeconds: 0, 
+    timelockDurationSeconds: 0,
     lastUpgradeDate: '2023-12-01',
     version: 8,
     isVerified: true,
@@ -96,7 +97,7 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
     timelockAddress: '0xtime...obj',
     sourceCodeUrl: 'https://github.com/gamefi',
   },
-    {
+  {
     id: '7',
     name: 'SuiSwap Pro',
     description: 'Leading AMM with strictly burned permissions.',
@@ -117,7 +118,7 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
     description: 'Central limit order book with DAO governance.',
     category: 'DeFi',
     logoUrl: 'https://picsum.photos/64/64?random=2',
-    policy: UpgradePolicy.Compatible, 
+    policy: UpgradePolicy.Compatible,
     ownershipType: OwnershipType.SharedTimelock, // DAO
     timelockDurationSeconds: 172800, // 48 Hours
     lastUpgradeDate: '2024-01-15',
@@ -138,7 +139,7 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
     ownershipType: OwnershipType.Single,
     timelockDurationSeconds: 0,
     lastUpgradeDate: '2024-03-10',
-    version: 52, 
+    version: 52,
     isVerified: false, // Unverified
     controllerAddress: '0xbad...actor',
     // No policy, no timelock, no source link
@@ -152,7 +153,7 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
     policy: UpgradePolicy.Additive,
     ownershipType: OwnershipType.MultiSig,
     multiSigThreshold: '3/5',
-    timelockDurationSeconds: 0, 
+    timelockDurationSeconds: 0,
     lastUpgradeDate: '2023-12-01',
     version: 8,
     isVerified: true,

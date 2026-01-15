@@ -149,7 +149,7 @@ function App() {
               <div className="w-px h-4 bg-slate-800 mx-1"></div>
 
               <a
-                href="https://t.me/+-VApxIWv69phYWQ1"
+                href="https://t.me/Sui_UpgradeCap_Radar"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-medium text-slate-400 hover:text-white hover:bg-slate-800/50 transition-colors whitespace-nowrap"

@@ -124,7 +124,7 @@ const DAppCard: React.FC<DAppCardProps> = ({ dapp }) => {
                             <h3 className="font-bold text-xl text-slate-100">{dapp.name}</h3>
                             <span className="text-xs text-slate-400 bg-slate-800 px-2 py-0.5 rounded-md border border-slate-700">{dapp.category}</span>
                         </div>
-                        <p className="text-slate-400 text-base mt-0.5 line-clamp-1">{dapp.description}</p>
+                        <p className="text-slate-400 text-xs mt-0.5 line-clamp-1">{dapp.description}</p>
                     </div>
                 </div>
 

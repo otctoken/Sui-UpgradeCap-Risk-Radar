@@ -21,13 +21,13 @@ export interface DAppRiskProfile {
   id: string;
   name: string;
   description: string;
-  category: 'DeFi' | 'NFT' | 'GameFi' | 'Infrastructure' | 'Meme';
-  logoUrl: string;
-  
+  category: 'DeFi' | 'NFT' | 'GameFi' | 'Infrastructure' | 'Meme' | "Lending";
+  logoUrl: string | any;
+
   // Risk Factors
   policy: UpgradePolicy;
   ownershipType: OwnershipType;
-  
+
   // Addresses for linking (New)
   controllerAddress?: string;     // The address holding the UpgradeCap
   customPolicyAddress?: string;   // The address of the custom policy package/object (if exists)

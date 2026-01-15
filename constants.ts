@@ -1,4 +1,4 @@
-import { Flag } from 'lucide-react';
+//import { Flag } from 'lucide-react';
 import { DAppRiskProfile, UpgradePolicy, OwnershipType } from './types';
 
 export const MOCK_DAPPS: DAppRiskProfile[] = [

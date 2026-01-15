@@ -4,7 +4,8 @@ import DAppCard from './components/DAppCard';
 import ScoreGuide from './components/ScoreGuide';
 import { MOCK_DAPPS } from './constants';
 import { calculateRiskScore } from './utils';
-
+// @ts-ignore
+import logo from './picture/logo.png'; // 没有红线
 type ViewType = 'dashboard' | 'rules';
 
 function App() {
@@ -110,7 +111,7 @@ function App() {
             >
               {/* === 修改开始：替换原来的图标代码 === */}
               <img
-                src="picture/logo.png"  // 请确保这里是您保存图片的实际路径
+                src={logo}  // 请确保这里是您保存图片的实际路径
                 alt="Sui UpgradeCap Radar"
                 className="w-10 h-10 rounded-full shadow-lg shadow-sui-blue/20 group-hover:scale-105 transition-transform duration-200"
               />

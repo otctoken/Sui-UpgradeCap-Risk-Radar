@@ -118,7 +118,7 @@ function App() {
               {/* === 修改结束 === */}
 
               <h1 className="text-lg md:text-xl font-bold tracking-tight text-white">
-                Sui UpgradeCap Radar
+                Sui UpgradeCap Risk Radar
               </h1>
             </div>
 

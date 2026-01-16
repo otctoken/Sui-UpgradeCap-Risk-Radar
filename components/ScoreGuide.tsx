@@ -143,6 +143,12 @@ const ScoreGuide = () => {
           </Section>
         </div>
       </div>
+      <p className="h-10"></p>
+      <div className="text-center mb-12">
+        <p className="text-slate-600 text-sm">
+          Continuously updating. Please contact TG if there are any false alarms!
+        </p>
+      </div>
     </div>
   )
 }

@@ -18,10 +18,10 @@ export type RiskLevel = 'Low' | 'Medium-Low' | 'Medium' | 'High';
 
 // The core data structure for a DApp
 export interface DAppRiskProfile {
-  id: string;
+  // id: string;
   name: string;
   description: string;
-  category: 'Defi|Lending' | 'NFT' | 'Game' | 'Meme';
+  category: 'Defi|Lending' | 'NFT' | 'Game' | 'Meme' | 'Defi|DEX' | 'Staked';
   logoUrl: string | any;
 
   // Risk Factors

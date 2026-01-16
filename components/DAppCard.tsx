@@ -91,7 +91,34 @@ const DAppCard: React.FC<DAppCardProps> = ({ dapp }) => {
             </a>
         );
     };
-
+    const AddressLink_c = ({ address, className }: { address?: string, className?: string }) => {
+        if (!address) return null;
+        return (
+            <a
+                href={`https://suiscan.xyz/mainnet/object/${address}/contracts`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={clsx("inline-flex items-center gap-1 hover:underline decoration-dashed underline-offset-4", className)}
+                onClick={(e) => e.stopPropagation()}
+            >
+                <ExternalLink className="w-3 h-3" />
+            </a>
+        );
+    };
+    const AddressLinkOB_fields = ({ address, className }: { address?: string, className?: string }) => {
+        if (!address) return null;
+        return (
+            <a
+                href={`https://suiscan.xyz/mainnet/object/${address}/fields`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={clsx("inline-flex items-center gap-1 hover:underline decoration-dashed underline-offset-4", className)}
+                onClick={(e) => e.stopPropagation()}
+            >
+                <ExternalLink className="w-3 h-3" />
+            </a>
+        );
+    };
     // Score Row Component for Breakdown
     const ScoreRow = ({ label, score, max }: { label: string, score: number, max: number }) => (
         <div className="flex items-baseline justify-between border-b border-slate-800/50 pb-1 border-dashed">
@@ -196,7 +223,7 @@ const DAppCard: React.FC<DAppCardProps> = ({ dapp }) => {
                                 {dapp.customPolicyAddress ? (
                                     <>
                                         <span className="text-sui-blue font-bold">Yes</span>
-                                        <AddressLink address={dapp.customPolicyAddress} className="text-sui-blue" />
+                                        <AddressLink_c address={dapp.customPolicyAddress} className="text-sui-blue" />
                                     </>
                                 ) : (
                                     <span className="text-slate-400">No</span>
@@ -210,7 +237,7 @@ const DAppCard: React.FC<DAppCardProps> = ({ dapp }) => {
                                 {dapp.timelockDurationSeconds > 0 ? (
                                     <>
                                         <span className="text-emerald-400">{formatDuration(dapp.timelockDurationSeconds)}</span>
-                                        <AddressLink address={dapp.timelockAddress} className="text-emerald-400" />
+                                        <AddressLinkOB_fields address={dapp.timelockAddress} className="text-emerald-400" />
                                     </>
                                 ) : (
                                     <span className={dapp.ownershipType === OwnershipType.Immutable ? "text-emerald-400" : "text-rose-400"}>

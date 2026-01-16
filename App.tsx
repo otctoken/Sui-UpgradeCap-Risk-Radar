@@ -18,7 +18,7 @@ function App() {
   const filterRef = useRef<HTMLDivElement>(null);
 
   const itemsPerPage = 10;
-  const categories = ['All', 'Defi|Lending', 'NFT', 'Game', 'Meme',];
+  const categories = ['All', 'Defi|Lending', 'NFT', 'Game', 'Defi|DEX', 'Staked', 'Meme',];
 
   // Close filter dropdown when clicking outside
   useEffect(() => {
@@ -319,7 +319,7 @@ function App() {
             <div className="space-y-2">
               {currentDapps.length > 0 ? (
                 currentDapps.map((dapp) => (
-                  <DAppCard key={dapp.id} dapp={dapp} />
+                  <DAppCard key={dapp.description} dapp={dapp} />
                 ))
               ) : (
                 <div className="text-center py-12 text-slate-500 bg-slate-900/50 rounded-xl border border-slate-800 border-dashed">

@@ -57,6 +57,17 @@ const ScoreGuide = () => {
           <p className="text-slate-400 text-lg">
             Our safety score is a weighted aggregate of 6 security dimensions, designed to measure the <span className="text-white font-medium">centralization risk</span> and <span className="text-white font-medium">upgrade authority</span> of a Sui protocol.
           </p>
+          <div className="mt-4 pt-2 border-t border-slate-800">
+            <a
+              href="https://github.com/otctoken/Sui-Move-contract-upgrade-delayed"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm text-sui-blue hover:text-blue-300 transition-colors"
+            >
+              <span>🔗</span>
+              <span>Delayed Upgrade Demo</span>
+            </a>
+          </div>
         </div>
 
         <div className="space-y-2">

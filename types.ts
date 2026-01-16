@@ -21,7 +21,7 @@ export interface DAppRiskProfile {
   id: string;
   name: string;
   description: string;
-  category: 'Defi|Lending' | 'NFT' | 'GameFi' | 'Infrastructure' | 'Meme';
+  category: 'Defi|Lending' | 'NFT' | 'Game' | 'Meme';
   logoUrl: string | any;
 
   // Risk Factors

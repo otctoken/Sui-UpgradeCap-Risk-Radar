@@ -1,22 +1,22 @@
 import { DAppRiskProfile, UpgradePolicy, OwnershipType, RiskScoreBreakdown, RiskLevel } from './types';
 
 export const calculateRiskScore = (dapp: DAppRiskProfile): RiskScoreBreakdown => {
-  let upgradeCapScore = 0;
-  let controllerScore = 0;
-  let policyScore = 0;
-  let delayedUpgradeScore = 0;
-  let stabilityScore = 0;
+  let upgradeCapScore = 0; //max20
+  let controllerScore = 0; // max 10
+  let policyScore = 0;  // max 10
+  let delayedUpgradeScore = 0; //max 55
+  let stabilityScore = 0; //max 5
   let sourceCodeScore = 0;
 
   // 1. UpgradeCap (Max 30)
   // Immutable ownership effectively means the cap is burned/unusable.
   // Rule: Immutable/DepOnly = 30, Additive = 15, Compatible = 0
-  if (dapp.ownershipType === OwnershipType.Immutable) {
-    upgradeCapScore = 30;
+  if (dapp.ownershipType === OwnershipType.Immutable || dapp.policy == UpgradePolicy.Immutable) {
+    upgradeCapScore = 1000;
   } else {
     switch (dapp.policy) {
-      case UpgradePolicy.DepOnly: upgradeCapScore = 30; break;
-      case UpgradePolicy.Additive: upgradeCapScore = 15; break;
+      case UpgradePolicy.DepOnly: upgradeCapScore = 20; break;
+      case UpgradePolicy.Additive: upgradeCapScore = 10; break;
       case UpgradePolicy.Compatible: default: upgradeCapScore = 0; break;
     }
   }
@@ -24,9 +24,8 @@ export const calculateRiskScore = (dapp: DAppRiskProfile): RiskScoreBreakdown =>
   // 2. Controller (Max 30)
   // Rule: Immutable/DAO = 30, Multisig = 20, Single = 0
   switch (dapp.ownershipType) {
-    case OwnershipType.Immutable: controllerScore = 30; break;
-    case OwnershipType.SharedTimelock: controllerScore = 30; break;
-    case OwnershipType.MultiSig: controllerScore = 20; break;
+    //case OwnershipType.Immutable: controllerScore = 30; break;
+    case OwnershipType.MultiSig: controllerScore = 10; break;
     case OwnershipType.Single: default: controllerScore = 0; break;
   }
 
@@ -44,8 +43,8 @@ export const calculateRiskScore = (dapp: DAppRiskProfile): RiskScoreBreakdown =>
     delayedUpgradeScore = 20;
   } else {
     const hours = dapp.timelockDurationSeconds / 3600;
-    if (hours >= 48) delayedUpgradeScore = 20;
-    else if (hours >= 24) delayedUpgradeScore = 10;
+    if (hours >= 24) delayedUpgradeScore = 55;
+    else if (hours > 12) delayedUpgradeScore = 20;
     else if (hours > 0) delayedUpgradeScore = 5;
     else delayedUpgradeScore = 0;
   }
@@ -66,12 +65,28 @@ export const calculateRiskScore = (dapp: DAppRiskProfile): RiskScoreBreakdown =>
     sourceCodeScore = 0;
   }
 
-  const total = upgradeCapScore + controllerScore + policyScore + delayedUpgradeScore + stabilityScore + sourceCodeScore;
+  let total = upgradeCapScore + controllerScore + policyScore + delayedUpgradeScore + stabilityScore;
+  if (upgradeCapScore > 900) {
+    total = 100
+    upgradeCapScore = 100
+    controllerScore = 0
+    policyScore = 0
+    delayedUpgradeScore = 0
+    stabilityScore = 0
+  }
+  if (sourceCodeScore == 0) {
+    total = 0
+    upgradeCapScore = 0
+    controllerScore = 0
+    policyScore = 0
+    delayedUpgradeScore = 0
+    stabilityScore = 0
+  }
 
   let riskLevel: RiskLevel = 'High';
-  if (total >= 80) riskLevel = 'Low';
-  else if (total >= 60) riskLevel = 'Medium-Low';
-  else if (total >= 40) riskLevel = 'Medium';
+  if (total >= 70) riskLevel = 'Low';
+  else if (total >= 40) riskLevel = 'Medium-Low';
+  else if (total >= 15) riskLevel = 'Medium';
 
   return {
     total,
@@ -98,6 +113,7 @@ export const getPolicyLabel = (policy: UpgradePolicy): string => {
     case UpgradePolicy.Compatible: return "Compatible";
     case UpgradePolicy.Additive: return "Additive";
     case UpgradePolicy.DepOnly: return "Dependency-only";
+    case UpgradePolicy.Immutable: return "Immutable";
     default: return "Unknown";
   }
 };

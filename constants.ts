@@ -9,7 +9,7 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
     id: '1',
     name: 'NaviProtocol',
     description: '0xee0041239b89564ce870a7dec5ddc5d114367ab94a1137e90aa0633cb76518e0',
-    category: 'Lending',
+    category: 'Defi|Lending',
     logoUrl: navi,
     policy: UpgradePolicy.Compatible,
     ownershipType: OwnershipType.MultiSig, // DAO
@@ -27,7 +27,7 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
     id: '2',
     name: 'SuiLend',
     description: '0x2d2a5129b8f07061d697c1b1729a06e696bf3b19c865a869055efba83759b04b',
-    category: 'Lending',
+    category: 'Defi|Lending',
     logoUrl: suilend,
     policy: UpgradePolicy.Compatible,
     ownershipType: OwnershipType.Single, // DAO
@@ -40,7 +40,7 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
     timelockAddress: '0xghi...timelock',
     sourceCodeUrl: 'https://suiscan.xyz/mainnet/object/0x2d2a5129b8f07061d697c1b1729a06e696bf3b19c865a869055efba83759b04b/contracts',
     // No controller address because it's immutable/burned
-  }
+  },
   // {
   //   id: '2',
   //   name: 'DeepBook Plus',

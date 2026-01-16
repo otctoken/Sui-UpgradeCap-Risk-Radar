@@ -3,14 +3,14 @@ export enum UpgradePolicy {
   Compatible = 0, // Code can change, existing data compatible
   Additive = 128, // Can only add new functions/structs
   DepOnly = 255,  // Dependency only (effectively immutable logic for existing modules)
+  Immutable = 500,
 }
 
 // Ownership structures
 export enum OwnershipType {
   Single = 'Single Address',
   MultiSig = 'MultiSig',
-  SharedTimelock = 'Timelock / DAO', // Renamed for display preference
-  Immutable = 'Burned / Immutable',
+  Immutable = "500",
 }
 
 // Risk Level Definition
@@ -21,7 +21,7 @@ export interface DAppRiskProfile {
   id: string;
   name: string;
   description: string;
-  category: 'DeFi' | 'NFT' | 'GameFi' | 'Infrastructure' | 'Meme' | "Lending";
+  category: 'Defi|Lending' | 'NFT' | 'GameFi' | 'Infrastructure' | 'Meme';
   logoUrl: string | any;
 
   // Risk Factors

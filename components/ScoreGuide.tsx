@@ -64,23 +64,25 @@ const ScoreGuide = () => {
           <Section
             icon={Lock}
             title="1. Upgrade Capability"
-            maxScore={30}
+            maxScore={20}
             description="Determines how much the code can be changed by the owner. Immutable contracts are the safest."
           >
-            <ScoreItem label="Immutable / Dependency Only (Safest)" score={30} variant="good" />
-            <ScoreItem label="Additive Only (Can only add new features)" score={15} variant="mid" />
-            <ScoreItem label="Compatible (Code can be rewritten)" score={0} variant="bad" />
+            <ScoreItem label="Immutable" score={100} variant="good" />
+            <ScoreItem label="Dependency-only" score={20} variant="mid" />
+            <ScoreItem label="Additive" score={10} variant="mid" />
+            <ScoreItem label="Compatible" score={0} variant="bad" />
           </Section>
 
           {/* 2. Controller */}
           <Section
             icon={Users}
             title="2. Ownership Structure"
-            maxScore={30}
-            description="Who holds the keys to the upgrade capability? Distributed ownership reduces the risk of malicious upgrades."
+            maxScore={10}
+            description="Who holds the keys to the upgrade capability? Distributed ownership reduces the risk 
+            of malicious upgrades. However, we assigned a score of 10 because even with a MultiSig or DAO, 
+            there is a risk that a single individual could control multiple keys."
           >
-            <ScoreItem label="Burned / DAO / Timelock" score={30} variant="good" />
-            <ScoreItem label="MultiSig Wallet" score={20} variant="mid" />
+            <ScoreItem label="MultiSig Wallet / DAO " score={10} variant="mid" />
             <ScoreItem label="Single Private Key (Risky)" score={0} variant="bad" />
           </Section>
 
@@ -99,12 +101,12 @@ const ScoreGuide = () => {
           <Section
             icon={Clock}
             title="4. Time Delay"
-            maxScore={20}
-            description="Is there a mandatory waiting period before an upgrade is executed? This gives users time to exit."
+            maxScore={55}
+            description="Is there a mandatory upgrade delay? This allows time for users to review changes or withdraw their assets. We give this a score of 55 because even if the upgrade authority is compromised, the time buffer allows users to identify risks and react."
           >
-            <ScoreItem label="> 48 Hours Delay" score={20} variant="good" />
-            <ScoreItem label="24 - 48 Hours Delay" score={10} variant="mid" />
-            <ScoreItem label="< 24 Hours Delay" score={5} variant="mid" />
+            <ScoreItem label="> 24 Hours Delay" score={55} variant="good" />
+            <ScoreItem label="12 - 24 Hours Delay" score={20} variant="mid" />
+            <ScoreItem label="< 12 Hours Delay" score={5} variant="mid" />
             <ScoreItem label="Instant Upgrade (No Delay)" score={0} variant="bad" />
           </Section>
 
@@ -123,11 +125,10 @@ const ScoreGuide = () => {
           <Section
             icon={FileCode}
             title="6. Transparency"
-            maxScore={5}
+            maxScore={0}
             description="Is the Move source code verified and publicly accessible on a block explorer?"
           >
-            <ScoreItem label="Source Verified" score={5} variant="good" />
-            <ScoreItem label="Unverified" score={0} variant="bad" />
+            <ScoreItem label="If unverified, the total score is 0 (Highest Risk)." score={0} variant="bad" />
           </Section>
         </div>
       </div>

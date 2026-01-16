@@ -42,6 +42,7 @@ const DAppCard: React.FC<DAppCardProps> = ({ dapp }) => {
     // Helper to determine UpgradeCap color
     const getUpgradeCapColor = () => {
         if (dapp.ownershipType === OwnershipType.Immutable) return "text-emerald-400";
+        if (dapp.policy === UpgradePolicy.Immutable) return "text-emerald-400";
         if (dapp.policy === UpgradePolicy.DepOnly) return "text-emerald-400";
         if (dapp.policy === UpgradePolicy.Additive) return "text-amber-400";
         return "text-rose-400";
@@ -50,7 +51,7 @@ const DAppCard: React.FC<DAppCardProps> = ({ dapp }) => {
     // Helper for Controller Label & Color
     const getControllerInfo = () => {
         if (dapp.ownershipType === OwnershipType.Immutable) return { label: 'Burned', color: 'text-emerald-400' };
-        if (dapp.ownershipType === OwnershipType.SharedTimelock) return { label: 'DAO', color: 'text-emerald-400' };
+        //if (dapp.ownershipType === OwnershipType.SharedTimelock) return { label: 'DAO', color: 'text-emerald-400' };
         if (dapp.ownershipType === OwnershipType.MultiSig) return { label: 'Multisig', color: 'text-amber-400' };
         return { label: 'Single Address', color: 'text-rose-400' };
     };
@@ -80,7 +81,7 @@ const DAppCard: React.FC<DAppCardProps> = ({ dapp }) => {
         if (!address) return null;
         return (
             <a
-                href={`https://suiscan.xyz/mainnet/object/${address}`}
+                href={`https://suiscan.xyz/mainnet/account/${address}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={clsx("inline-flex items-center gap-1 hover:underline decoration-dashed underline-offset-4", className)}
@@ -274,12 +275,19 @@ const DAppCard: React.FC<DAppCardProps> = ({ dapp }) => {
                         {/* Detailed Score Breakdown */}
                         <div className="bg-slate-900 rounded p-4 text-sm text-slate-400 border border-slate-800/50">
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-1.5">
-                                <ScoreRow label="UpgradeCap" score={scores.upgradeCapScore} max={30} />
-                                <ScoreRow label="Controller" score={scores.controllerScore} max={30} />
+                                <ScoreRow label="UpgradeCap" score={scores.upgradeCapScore} max={20} />
+                                <ScoreRow label="Controller" score={scores.controllerScore} max={10} />
                                 <ScoreRow label="Upgrade Policy" score={scores.policyScore} max={10} />
-                                <ScoreRow label="Delayed Upgrade" score={scores.delayedUpgradeScore} max={20} />
+                                <ScoreRow label="Delayed Upgrade" score={scores.delayedUpgradeScore} max={55} />
                                 <ScoreRow label="Stability" score={scores.stabilityScore} max={5} />
-                                <ScoreRow label="Source Code" score={scores.sourceCodeScore} max={5} />
+                                <div className="flex justify-between items-center py-2">
+                                    <span>Source Code</span>
+                                    {scores.sourceCodeScore === 0 ? (
+                                        <span className="text-rose-400">False</span>
+                                    ) : (
+                                        <span className="text-emerald-400">True</span>
+                                    )}
+                                </div>
                             </div>
 
                             <div className="flex justify-end items-baseline gap-2 mt-3 pt-2 border-t border-slate-800">

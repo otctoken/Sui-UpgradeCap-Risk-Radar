@@ -18,7 +18,7 @@ function App() {
   const filterRef = useRef<HTMLDivElement>(null);
 
   const itemsPerPage = 10;
-  const categories = ['All', 'DeFi', 'NFT', 'GameFi', 'Infrastructure', 'Meme', "Lending"];
+  const categories = ['All', 'Defi|Lending', 'NFT', 'GameFi', 'Infrastructure', 'Meme',];
 
   // Close filter dropdown when clicking outside
   useEffect(() => {
@@ -224,27 +224,38 @@ function App() {
               <p className="text-slate-400 text-sm mb-4">
                 Sui Move contracts are upgradeable by default. If upgrade authority is centralized and immediate, a safe protocol today could become malicious code tomorrow. We track the UpgradeCap so you don't have to.
               </p>
-              <div className="grid grid-cols-2 md:grid-cols-5 gap-y-4 gap-x-4 border-t border-slate-800 pt-4">
-                <div className="text-center md:text-left">
-                  <div className="text-xl font-bold text-white">{stats.total}</div>
-                  <div className="text-[10px] text-slate-500 uppercase tracking-wider font-semibold">Protocols</div>
+              <div className="grid grid-cols-5 gap-1 md:gap-4 border-t border-slate-800 pt-4">
+
+                {/* 1. Protocols */}
+                <div className="flex flex-col items-center">
+                  <div className="text-sm sm:text-xl font-bold text-white">{stats.total}</div>
+                  <div className="text-[8px] sm:text-[10px] text-slate-500 uppercase font-semibold leading-tight">Protocols</div>
                 </div>
-                <div className="text-center md:text-left">
-                  <div className="text-xl font-bold text-emerald-400">{stats.low}</div>
-                  <div className="text-[10px] text-slate-500 uppercase tracking-wider font-semibold">Low Risk</div>
+
+                {/* 2. Low Risk */}
+                <div className="flex flex-col items-center">
+                  <div className="text-sm sm:text-xl font-bold text-emerald-400">{stats.low}</div>
+                  <div className="text-[8px] sm:text-[10px] text-slate-500 uppercase font-semibold leading-tight">Low</div>
                 </div>
-                <div className="text-center md:text-left">
-                  <div className="text-xl font-bold text-blue-400">{stats.mediumLow}</div>
-                  <div className="text-[10px] text-slate-500 uppercase tracking-wider font-semibold">Med-Low</div>
+
+                {/* 3. Med-Low */}
+                <div className="flex flex-col items-center">
+                  <div className="text-sm sm:text-xl font-bold text-blue-400">{stats.mediumLow}</div>
+                  <div className="text-[8px] sm:text-[10px] text-slate-500 uppercase font-semibold leading-tight whitespace-nowrap">Med-Low</div>
                 </div>
-                <div className="text-center md:text-left">
-                  <div className="text-xl font-bold text-amber-400">{stats.medium}</div>
-                  <div className="text-[10px] text-slate-500 uppercase tracking-wider font-semibold">Medium</div>
+
+                {/* 4. Medium */}
+                <div className="flex flex-col items-center">
+                  <div className="text-sm sm:text-xl font-bold text-amber-400">{stats.medium}</div>
+                  <div className="text-[8px] sm:text-[10px] text-slate-500 uppercase font-semibold leading-tight">Medium</div>
                 </div>
-                <div className="text-center md:text-left">
-                  <div className="text-xl font-bold text-rose-400">{stats.high}</div>
-                  <div className="text-[10px] text-slate-500 uppercase tracking-wider font-semibold">High Risk</div>
+
+                {/* 5. High Risk */}
+                <div className="flex flex-col items-center">
+                  <div className="text-sm sm:text-xl font-bold text-rose-400">{stats.high}</div>
+                  <div className="text-[8px] sm:text-[10px] text-slate-500 uppercase font-semibold leading-tight">High</div>
                 </div>
+
               </div>
             </div>
           )}

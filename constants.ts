@@ -22,6 +22,12 @@ import brag from './picture/brag.jpg'; //
 import savingsgame from './picture/savingsgame.png'; // 
 // @ts-ignore
 import Bucket from './picture/Bucket.jpg'; // 
+// @ts-ignore
+import Scallop from './picture/Scallop.jpg'; // 
+// @ts-ignore
+import Pawtato_Land from './picture/Pawtato_Land.png'; // 
+// @ts-ignore
+import Sui_Name_Service from './picture/Sui_Name_Service.png'; // 
 
 export const MOCK_DAPPS: DAppRiskProfile[] = [
   {
@@ -220,6 +226,60 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
     //customPolicyAddress: '0x3513dd3a697b217997e6681a2ecee0ed25f7ec3e033a06ca63df1b78d79d920e', // 策略合约地址
     timelockAddress: '0xghi...timelock',
     sourceCodeUrl: 'https://suiscan.xyz/mainnet/object/0x524a37ec411ba112f284508d9cd98265b796bea85db9450c84a42c8b5268885d/contracts',
+    // No controller address because it's immutable/burned
+  },
+  {
+    upgradecap: "0x38527d154618d1fd5a644b90717fe07cf0e9f26b46b63e9568e611a3f86d5c1a",
+    name: 'Scallop',
+    description: '0xd384ded6b9e7f4d2c4c9007b0291ef88fbfed8e709bce83d2da69de2d79d013d',
+    category: 'Defi|Lending',
+    logoUrl: Scallop,
+    policy: UpgradePolicy.Compatible,
+    ownershipType: OwnershipType.MultiSig, // DAO
+    timelockDurationSeconds: 0, // 48 Hours
+    lastUpgradeDate: '2026-01-08',
+    version: 17,
+    isVerified: true,
+    controllerAddress: '0x1226a80ef40bd2e70c6a285b045b9b5d29915a2c5a2d57a2d3032cbdd89a8d5c',//多签地址或单签地址
+    //customPolicyAddress: '0x3513dd3a697b217997e6681a2ecee0ed25f7ec3e033a06ca63df1b78d79d920e', // 策略合约地址
+    timelockAddress: '0xghi...timelock',
+    sourceCodeUrl: 'https://suiscan.xyz/mainnet/object/0xd384ded6b9e7f4d2c4c9007b0291ef88fbfed8e709bce83d2da69de2d79d013d/contracts',
+    // No controller address because it's immutable/burned
+  },
+  {
+    upgradecap: "0x3ab44acd8cf9bb4bab22b3f77974043c281ed7bbc9151a90475345bea7015600",
+    name: 'Pawtato Land',
+    description: '0x3b50d91ff28484f58c1c66bd0b15f5c5416c7ddf4e9391b16f0f20c236517ef3',
+    category: 'NFT',
+    logoUrl: Pawtato_Land,
+    policy: UpgradePolicy.Compatible,
+    ownershipType: OwnershipType.Single, // DAO
+    timelockDurationSeconds: 0, // 48 Hours
+    lastUpgradeDate: '2026-01-08',
+    version: 97,
+    isVerified: true,
+    controllerAddress: '0x89d3a9c91cbfeb9b59335c526b0726262a51f2e0ef97775397feb83d194f4e2c',//多签地址或单签地址
+    //customPolicyAddress: '0x3513dd3a697b217997e6681a2ecee0ed25f7ec3e033a06ca63df1b78d79d920e', // 策略合约地址
+    timelockAddress: '0xghi...timelock',
+    sourceCodeUrl: 'https://suiscan.xyz/mainnet/object/0x3b50d91ff28484f58c1c66bd0b15f5c5416c7ddf4e9391b16f0f20c236517ef3/contracts',
+    // No controller address because it's immutable/burned
+  },
+  {
+    upgradecap: "0x9cda28244a0d0de294d2b271e772a9c33eb47d316c59913d7369b545b4af098c",
+    name: 'Sui Name Service',
+    description: '0x71af035413ed499710980ed8adb010bbf2cc5cacf4ab37c7710a4bb87eb58ba5',
+    category: 'NFT',
+    logoUrl: Sui_Name_Service,
+    policy: UpgradePolicy.Compatible,
+    ownershipType: OwnershipType.MultiSig, // DAO
+    timelockDurationSeconds: 0, // 48 Hours
+    lastUpgradeDate: '2026-01-16',
+    version: 4,
+    isVerified: true,
+    controllerAddress: '0x9b388a6da9dd4f73e0b13abc6100f1141782ef105f6f5e9d986fb6e00f0b2591',//多签地址或单签地址
+    //customPolicyAddress: '0x3513dd3a697b217997e6681a2ecee0ed25f7ec3e033a06ca63df1b78d79d920e', // 策略合约地址
+    timelockAddress: '0xghi...timelock',
+    sourceCodeUrl: 'https://suiscan.xyz/mainnet/object/0x71af035413ed499710980ed8adb010bbf2cc5cacf4ab37c7710a4bb87eb58ba5/contracts',
     // No controller address because it's immutable/burned
   },
 

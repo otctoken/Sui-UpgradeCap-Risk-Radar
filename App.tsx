@@ -18,7 +18,7 @@ function App() {
   const filterRef = useRef<HTMLDivElement>(null);
 
   const itemsPerPage = 10;
-  const categories = ['All', 'Defi|Lending', 'NFT', 'Game', 'Defi|DEX', 'Staked', 'Meme',];
+  const categories = ['All', 'Defi|Lending', 'NFT', 'Game', 'Defi|DEX', 'Staked',];
 
   // Close filter dropdown when clicking outside
   useEffect(() => {

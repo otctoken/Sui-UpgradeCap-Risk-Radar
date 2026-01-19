@@ -65,7 +65,7 @@ function App() {
       const searchLower = searchQuery.toLowerCase();
       const matchesSearch =
         dapp.name.toLowerCase().includes(searchLower) ||
-        dapp.description.toLowerCase().includes(searchLower);
+        dapp.contract.toLowerCase().includes(searchLower);
 
       const matchesCategory = selectedCategory === 'All' || dapp.category === selectedCategory;
       return matchesSearch && matchesCategory;
@@ -319,7 +319,7 @@ function App() {
             <div className="space-y-2">
               {currentDapps.length > 0 ? (
                 currentDapps.map((dapp) => (
-                  <DAppCard key={dapp.description} dapp={dapp} />
+                  <DAppCard key={dapp.contract} dapp={dapp} />
                 ))
               ) : (
                 <div className="text-center py-12 text-slate-500 bg-slate-900/50 rounded-xl border border-slate-800 border-dashed">

@@ -21,7 +21,7 @@ export interface DAppRiskProfile {
   upgradecap: string;
   // id: string;
   name: string;
-  description: string;
+  contract: string;
   category: 'Defi|Lending' | 'NFT' | 'Game' | 'Defi|DEX' | 'Staked';
   logoUrl: string | any;
 
@@ -30,7 +30,7 @@ export interface DAppRiskProfile {
   ownershipType: OwnershipType;
 
   // Addresses for linking (New)
-  controllerAddress?: string;     // The address holding the UpgradeCap
+  upgradecapAddress?: string;     // The address holding the UpgradeCap
   customPolicyAddress?: string;   // The address of the custom policy package/object (if exists)
   timelockAddress?: string;       // The address of the timelock object (if exists)
   sourceCodeUrl?: string;         // Link to explorer or repo

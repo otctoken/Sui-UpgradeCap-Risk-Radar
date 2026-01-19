@@ -18,6 +18,7 @@ export type RiskLevel = 'Low' | 'Medium-Low' | 'Medium' | 'High';
 
 // The core data structure for a DApp
 export interface DAppRiskProfile {
+  upgradecap: string;
   // id: string;
   name: string;
   description: string;

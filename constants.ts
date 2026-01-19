@@ -20,9 +20,12 @@ import Momentum from './picture/Momentum.jpg'; //
 import brag from './picture/brag.jpg'; // 
 // @ts-ignore
 import savingsgame from './picture/savingsgame.png'; // 
+// @ts-ignore
+import Bucket from './picture/Bucket.jpg'; // 
 
 export const MOCK_DAPPS: DAppRiskProfile[] = [
-  {//0xdba1b40f3537441b51d2848fc0a149610e48e67c1cc48c6ad641767622000623
+  {
+    upgradecap: "0xdba1b40f3537441b51d2848fc0a149610e48e67c1cc48c6ad641767622000623",
     name: 'NaviProtocol',
     description: '0xee0041239b89564ce870a7dec5ddc5d114367ab94a1137e90aa0633cb76518e0',
     category: 'Defi|Lending',
@@ -39,7 +42,8 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
     sourceCodeUrl: 'https://suiscan.xyz/mainnet/object/0xee0041239b89564ce870a7dec5ddc5d114367ab94a1137e90aa0633cb76518e0/contracts',
     // No controller address because it's immutable/burned
   },
-  {//0x3d4ef1859c3ee9fc72858f588b56a09da5466e64f8cc4e90a7b3b909fba8a7ae
+  {
+    upgradecap: "0x3d4ef1859c3ee9fc72858f588b56a09da5466e64f8cc4e90a7b3b909fba8a7ae",
     name: 'SuiLend',
     description: '0x2d2a5129b8f07061d697c1b1729a06e696bf3b19c865a869055efba83759b04b',
     category: 'Defi|Lending',
@@ -56,7 +60,8 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
     sourceCodeUrl: 'https://suiscan.xyz/mainnet/object/0x2d2a5129b8f07061d697c1b1729a06e696bf3b19c865a869055efba83759b04b/contracts',
     // No controller address because it's immutable/burned
   },
-  {//0xd5b2d2159a78030e6f07e028eb75236693ed7f2f32fecbdc1edb32d3a2079c0d
+  {
+    upgradecap: "0xd5b2d2159a78030e6f07e028eb75236693ed7f2f32fecbdc1edb32d3a2079c0d",
     name: 'Bluefin',
     description: '0xd075338d105482f1527cbfd363d6413558f184dec36d9138a70261e87f486e9c',
     category: 'Defi|DEX',
@@ -73,7 +78,8 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
     sourceCodeUrl: 'https://suiscan.xyz/mainnet/object/0xd075338d105482f1527cbfd363d6413558f184dec36d9138a70261e87f486e9c/contracts',
     // No controller address because it's immutable/burned
   },
-  {//0x4462a572640227717cb8c60b6dd337f022743de6bc13f1fe0b7adb182d1fa274
+  {
+    upgradecap: "0x4462a572640227717cb8c60b6dd337f022743de6bc13f1fe0b7adb182d1fa274",
     name: 'Cetus',
     description: '0x25ebb9a7c50eb17b3fa9c5a30fb8b5ad8f97caaf4928943acbcff7153dfee5e3',
     category: 'Defi|DEX',
@@ -90,7 +96,8 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
     sourceCodeUrl: 'https://suiscan.xyz/mainnet/object/0x25ebb9a7c50eb17b3fa9c5a30fb8b5ad8f97caaf4928943acbcff7153dfee5e3/contracts',
     // No controller address because it's immutable/burned
   },
-  {//0x59d16188948e7b89791271c7af78cb877092b8858db44c9166b8af9dee55dcb4
+  {
+    upgradecap: "0x59d16188948e7b89791271c7af78cb877092b8858db44c9166b8af9dee55dcb4",
     name: 'Momentum',
     description: '0xcf60a40f45d46fc1e828871a647c1e25a0915dec860d2662eb10fdb382c3c1d1',
     category: 'Defi|DEX',
@@ -107,7 +114,8 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
     sourceCodeUrl: 'https://suiscan.xyz/mainnet/object/0xcf60a40f45d46fc1e828871a647c1e25a0915dec860d2662eb10fdb382c3c1d1/contracts',
     // No controller address because it's immutable/burned
   },
-  {//0x208ee19bd0523bd1f3ea740a8057e82ba62ac544f70bcb008b0893660265355c
+  {
+    upgradecap: "0x208ee19bd0523bd1f3ea740a8057e82ba62ac544f70bcb008b0893660265355c",
     name: 'AlphaLend',
     description: '0x5209a18e1ae6ac994dd5a188a2d8deb17b2bbab29f63a7b5457bdfe040f69f61',
     category: 'Defi|Lending',
@@ -124,8 +132,8 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
     sourceCodeUrl: 'https://suiscan.xyz/mainnet/object/0x5209a18e1ae6ac994dd5a188a2d8deb17b2bbab29f63a7b5457bdfe040f69f61/contracts',
     // No controller address because it's immutable/burned
   },
-  {//0x4dc657b6c0fe896f4b94fee1ceac96312dde0a36b94e799caaec30deb53dcd67
-
+  {
+    upgradecap: "0x4dc657b6c0fe896f4b94fee1ceac96312dde0a36b94e799caaec30deb53dcd67",
     name: 'SpringSui',
     description: '0xc89f4edb8f4dafb97934dbfce11ac132c07759c3bdda6f31d09c7fdca3b80b76',
     category: 'Staked',
@@ -142,7 +150,8 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
     sourceCodeUrl: 'https://suiscan.xyz/mainnet/object/0xc89f4edb8f4dafb97934dbfce11ac132c07759c3bdda6f31d09c7fdca3b80b76/contracts',
     // No controller address because it's immutable/burned
   },
-  {//0xc1c6690f21937f90e6b42f7c916d8e8c942926e3fb9e5c3c5584ae1e91502f25
+  {
+    upgradecap: "0xc1c6690f21937f90e6b42f7c916d8e8c942926e3fb9e5c3c5584ae1e91502f25",
     name: 'Haedal',
     description: '0x19e6ea7f5ced4f090e20da794cc80349a03e638940ddb95155a4e301f5f4967c',
     category: 'Staked',
@@ -159,7 +168,8 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
     sourceCodeUrl: 'https://suiscan.xyz/mainnet/object/0x19e6ea7f5ced4f090e20da794cc80349a03e638940ddb95155a4e301f5f4967c/contracts',
     // No controller address because it's immutable/burned
   },
-  {//0xc1c6690f21937f90e6b42f7c916d8e8c942926e3fb9e5c3c5584ae1e91502f25
+  {
+    upgradecap: "0xc1c6690f21937f90e6b42f7c916d8e8c942926e3fb9e5c3c5584ae1e91502f25",
     name: 'Brag',
     description: '0x93a36744eff6ee002ef32948866098eae032f277e7e702133dd35dc7cbfe1681',
     category: 'Game',
@@ -176,7 +186,8 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
     sourceCodeUrl: 'https://suiscan.xyz/mainnet/object/0x93a36744eff6ee002ef32948866098eae032f277e7e702133dd35dc7cbfe1681/contracts',
     // No controller address because it's immutable/burned
   },
-  {//0xc1c6690f21937f90e6b42f7c916d8e8c942926e3fb9e5c3c5584ae1e91502f25
+  {
+    upgradecap: "0xc1c6690f21937f90e6b42f7c916d8e8c942926e3fb9e5c3c5584ae1e91502f25",
     name: 'SavingsGame',
     description: '0xb95a8704a4e56f7b461c521dd785f11a597e50736fbfb810d000586d77f259fe',
     category: 'Game',
@@ -193,180 +204,23 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
     sourceCodeUrl: 'https://suiscan.xyz/mainnet/object/0xb95a8704a4e56f7b461c521dd785f11a597e50736fbfb810d000586d77f259fe/contracts',
     // No controller address because it's immutable/burned
   },
+  {
+    upgradecap: "0x4035e8134f67518779278b3f3fcf9212249bde705a5f2e04005c686d7cf2f357",
+    name: 'Bucket',
+    description: '0x524a37ec411ba112f284508d9cd98265b796bea85db9450c84a42c8b5268885d',
+    category: 'Defi|Lending',
+    logoUrl: Bucket,
+    policy: UpgradePolicy.Compatible,
+    ownershipType: OwnershipType.MultiSig, // DAO
+    timelockDurationSeconds: 0, // 48 Hours
+    lastUpgradeDate: '2025-10-21',
+    version: 2,
+    isVerified: true,
+    controllerAddress: '0x19f528cf4b5d0d8bcbc33c66405d149ea726a4dc1bc773537dc65364d4e58be4',//多签地址或单签地址
+    //customPolicyAddress: '0x3513dd3a697b217997e6681a2ecee0ed25f7ec3e033a06ca63df1b78d79d920e', // 策略合约地址
+    timelockAddress: '0xghi...timelock',
+    sourceCodeUrl: 'https://suiscan.xyz/mainnet/object/0x524a37ec411ba112f284508d9cd98265b796bea85db9450c84a42c8b5268885d/contracts',
+    // No controller address because it's immutable/burned
+  },
 
-  // {
-  //   id: '2',
-  //   name: 'DeepBook Plus',
-  //   description: 'Central limit order book with DAO governance.',
-  //   category: 'DeFi',
-  //   logoUrl: 'https://picsum.photos/64/64?random=2',
-  //   policy: UpgradePolicy.Compatible,
-  //   ownershipType: OwnershipType.SharedTimelock, // DAO
-  //   timelockDurationSeconds: 172800, // 48 Hours
-  //   lastUpgradeDate: '2024-01-15',
-  //   version: 12,
-  //   isVerified: true,
-  //   controllerAddress: '0xabc...dao',
-  //   customPolicyAddress: '0xdef...policy', // Has custom policy
-  //   timelockAddress: '0xghi...timelock',
-  //   sourceCodeUrl: 'https://github.com/deepbook',
-  // },
-  // {
-  //   id: '3',
-  //   name: 'Degen Farm v50',
-  //   description: 'High yield farming protocol.',
-  //   category: 'DeFi',
-  //   logoUrl: 'https://picsum.photos/64/64?random=3',
-  //   policy: UpgradePolicy.Compatible,
-  //   ownershipType: OwnershipType.Single,
-  //   timelockDurationSeconds: 0,
-  //   lastUpgradeDate: '2024-03-10',
-  //   version: 52,
-  //   isVerified: false, // Unverified
-  //   controllerAddress: '0xbad...actor',
-  //   // No policy, no timelock, no source link
-  // },
-  // {
-  //   id: '4',
-  //   name: 'SuiLend Protocol',
-  //   description: 'Lending and borrowing platform.',
-  //   category: 'DeFi',
-  //   logoUrl: 'https://picsum.photos/64/64?random=4',
-  //   policy: UpgradePolicy.Additive,
-  //   ownershipType: OwnershipType.MultiSig,
-  //   multiSigThreshold: '3/5',
-  //   timelockDurationSeconds: 0,
-  //   lastUpgradeDate: '2023-12-01',
-  //   version: 8,
-  //   isVerified: true,
-  //   controllerAddress: '0xmul...tisig',
-  //   customPolicyAddress: '0xpol...icy', // Has policy but no timelock
-  //   sourceCodeUrl: 'https://suiexplorer.com/package/0x...',
-  // },
-  // {
-  //   id: '5',
-  //   name: 'Meme King',
-  //   description: 'Community token launcher.',
-  //   category: 'Meme',
-  //   logoUrl: 'https://picsum.photos/64/64?random=5',
-  //   policy: UpgradePolicy.Compatible,
-  //   ownershipType: OwnershipType.Single,
-  //   timelockDurationSeconds: 0,
-  //   lastUpgradeDate: '2024-03-11',
-  //   version: 2,
-  //   isVerified: true,
-  //   controllerAddress: '0xdev...addr',
-  //   sourceCodeUrl: 'https://suiexplorer.com/package/0x...',
-  // },
-  // {
-  //   id: '6',
-  //   name: 'GameFi Nexus',
-  //   description: 'On-chain gaming infrastructure.',
-  //   category: 'GameFi',
-  //   logoUrl: 'https://picsum.photos/64/64?random=6',
-  //   policy: UpgradePolicy.DepOnly,
-  //   ownershipType: OwnershipType.SharedTimelock,
-  //   timelockDurationSeconds: 86400, // 24 Hours
-  //   lastUpgradeDate: '2024-02-20',
-  //   version: 5,
-  //   isVerified: true,
-  //   controllerAddress: '0xgam...gov',
-  //   timelockAddress: '0xtime...obj',
-  //   sourceCodeUrl: 'https://github.com/gamefi',
-  // },
-  // {
-  //   id: '7',
-  //   name: 'SuiSwap Pro',
-  //   description: 'Leading AMM with strictly burned permissions.',
-  //   category: 'DeFi',
-  //   logoUrl: 'https://picsum.photos/64/64?random=1',
-  //   policy: UpgradePolicy.DepOnly,
-  //   ownershipType: OwnershipType.Immutable,
-  //   timelockDurationSeconds: 0,
-  //   lastUpgradeDate: '2023-05-20',
-  //   version: 4,
-  //   isVerified: true,
-  //   sourceCodeUrl: 'https://suiexplorer.com/object/0x123',
-  //   // No controller address because it's immutable/burned
-  // },
-  // {
-  //   id: '8',
-  //   name: 'DeepBook Plus',
-  //   description: 'Central limit order book with DAO governance.',
-  //   category: 'DeFi',
-  //   logoUrl: 'https://picsum.photos/64/64?random=2',
-  //   policy: UpgradePolicy.Compatible,
-  //   ownershipType: OwnershipType.SharedTimelock, // DAO
-  //   timelockDurationSeconds: 172800, // 48 Hours
-  //   lastUpgradeDate: '2024-01-15',
-  //   version: 12,
-  //   isVerified: true,
-  //   controllerAddress: '0xabc...dao',
-  //   customPolicyAddress: '0xdef...policy', // Has custom policy
-  //   timelockAddress: '0xghi...timelock',
-  //   sourceCodeUrl: 'https://github.com/deepbook',
-  // },
-  // {
-  //   id: '9',
-  //   name: 'Degen Farm v50',
-  //   description: 'High yield farming protocol.',
-  //   category: 'DeFi',
-  //   logoUrl: 'https://picsum.photos/64/64?random=3',
-  //   policy: UpgradePolicy.Compatible,
-  //   ownershipType: OwnershipType.Single,
-  //   timelockDurationSeconds: 0,
-  //   lastUpgradeDate: '2024-03-10',
-  //   version: 52,
-  //   isVerified: false, // Unverified
-  //   controllerAddress: '0xbad...actor',
-  //   // No policy, no timelock, no source link
-  // },
-  // {
-  //   id: '10',
-  //   name: 'SuiLend Protocol',
-  //   description: 'Lending and borrowing platform.',
-  //   category: 'DeFi',
-  //   logoUrl: 'https://picsum.photos/64/64?random=4',
-  //   policy: UpgradePolicy.Additive,
-  //   ownershipType: OwnershipType.MultiSig,
-  //   multiSigThreshold: '3/5',
-  //   timelockDurationSeconds: 0,
-  //   lastUpgradeDate: '2023-12-01',
-  //   version: 8,
-  //   isVerified: true,
-  //   controllerAddress: '0xmul...tisig',
-  //   customPolicyAddress: '0xpol...icy', // Has policy but no timelock
-  //   sourceCodeUrl: 'https://suiexplorer.com/package/0x...',
-  // },
-  // {
-  //   id: '11',
-  //   name: 'Meme King',
-  //   description: 'Community token launcher.',
-  //   category: 'Meme',
-  //   logoUrl: 'https://picsum.photos/64/64?random=5',
-  //   policy: UpgradePolicy.Compatible,
-  //   ownershipType: OwnershipType.Single,
-  //   timelockDurationSeconds: 0,
-  //   lastUpgradeDate: '2024-03-11',
-  //   version: 2,
-  //   isVerified: true,
-  //   controllerAddress: '0xdev...addr',
-  //   sourceCodeUrl: 'https://suiexplorer.com/package/0x...',
-  // },
-  // {
-  //   id: '12',
-  //   name: 'GameFi Nexus',
-  //   description: 'On-chain gaming infrastructure.',
-  //   category: 'GameFi',
-  //   logoUrl: 'https://picsum.photos/64/64?random=6',
-  //   policy: UpgradePolicy.DepOnly,
-  //   ownershipType: OwnershipType.SharedTimelock,
-  //   timelockDurationSeconds: 86400, // 24 Hours
-  //   lastUpgradeDate: '2024-02-20',
-  //   version: 5,
-  //   isVerified: true,
-  //   controllerAddress: '0xgam...gov',
-  //   timelockAddress: '0xtime...obj',
-  //   sourceCodeUrl: 'https://github.com/gamefi',
-  // }
 ];

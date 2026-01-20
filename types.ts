@@ -33,7 +33,6 @@ export interface DAppRiskProfile {
   upgradecapAddress?: string;     // The address holding the UpgradeCap
   customPolicyAddress?: string;   // The address of the custom policy package/object (if exists)
   timelockAddress?: string;       // The address of the timelock object (if exists)
-  sourceCodeUrl?: string;         // Link to explorer or repo
 
   // Metadata for scoring
   multiSigThreshold?: string; // e.g., "3/5"

@@ -269,9 +269,9 @@ const DAppCard: React.FC<DAppCardProps> = ({ dapp }) => {
                                     </div>
                                 )}
 
-                                {dapp.sourceCodeUrl && (
+                                {dapp.contract && (
                                     <a
-                                        href={dapp.sourceCodeUrl}
+                                        href={`https://suiscan.xyz/mainnet/object/${dapp.contract}/contracts`}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="text-slate-400 hover:text-white transition-colors"

@@ -1,33 +1,6 @@
 //import { Flag } from 'lucide-react';
 import { DAppRiskProfile, UpgradePolicy, OwnershipType } from './types';
-// @ts-ignore
-import navi from './public/navi.png'; // 
-// @ts-ignore
-import suilend from './public/suilend.svg'; // 
-// @ts-ignore
-import bluefin from './public/bluefin.jpg'; // 
-// @ts-ignore
-import spring from './public/Spring.png'; // 
-// @ts-ignore
-import alphafiled from './public/Alphafil.jpg'; // 
-// @ts-ignore
-import Haedal from './public/Haedal.jpg'; // 
-// @ts-ignore
-import Cetus from './public/Cetus.png'; // 
-// @ts-ignore
-import Momentum from './public/Momentum.jpg'; // 
-// @ts-ignore
-import brag from './public/brag.jpg'; // 
-// @ts-ignore
-import savingsgame from './public/savingsgame.png'; // 
-// @ts-ignore
-import Bucket from './public/Bucket.jpg'; // 
-// @ts-ignore
-import Scallop from './public/Scallop.jpg'; // 
-// @ts-ignore
-import Pawtato_Land from './public/Pawtato_Land.png'; // 
-// @ts-ignore
-import Sui_Name_Service from './public/Sui_Name_Service.png'; // 
+
 
 
 
@@ -51,7 +24,7 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
   },
   {
     name: 'SuiLend',
-    logoUrl: suilend,
+    logoUrl: "suilend.svg",
     contract: '0x2d2a5129b8f07061d697c1b1729a06e696bf3b19c865a869055efba83759b04b',
     upgradecap: "0x3d4ef1859c3ee9fc72858f588b56a09da5466e64f8cc4e90a7b3b909fba8a7ae",
     lastUpgradeDate: '2026-01-06',
@@ -68,7 +41,7 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
   },
   {
     name: 'Bluefin',
-    logoUrl: bluefin,
+    logoUrl: "bluefin.jpg",
     contract: '0xd075338d105482f1527cbfd363d6413558f184dec36d9138a70261e87f486e9c',
     upgradecap: "0xd5b2d2159a78030e6f07e028eb75236693ed7f2f32fecbdc1edb32d3a2079c0d",
     lastUpgradeDate: '2025-12-10',
@@ -85,7 +58,7 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
   },
   {
     name: 'Cetus',
-    logoUrl: Cetus,
+    logoUrl: "Cetus.png",
     contract: '0x25ebb9a7c50eb17b3fa9c5a30fb8b5ad8f97caaf4928943acbcff7153dfee5e3',
     upgradecap: "0x4462a572640227717cb8c60b6dd337f022743de6bc13f1fe0b7adb182d1fa274",
     lastUpgradeDate: '2025-10-14',
@@ -102,7 +75,7 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
   },
   {
     name: 'Momentum',
-    logoUrl: Momentum,
+    logoUrl: "Momentum.jpg",
     contract: '0xcf60a40f45d46fc1e828871a647c1e25a0915dec860d2662eb10fdb382c3c1d1',
     upgradecap: "0x59d16188948e7b89791271c7af78cb877092b8858db44c9166b8af9dee55dcb4",
     lastUpgradeDate: '2026-01-14',
@@ -119,7 +92,7 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
   },
   {
     name: 'AlphaLend',
-    logoUrl: alphafiled,
+    logoUrl: "Alphafil.jpg",
     contract: '0x5209a18e1ae6ac994dd5a188a2d8deb17b2bbab29f63a7b5457bdfe040f69f61',
     upgradecap: "0x208ee19bd0523bd1f3ea740a8057e82ba62ac544f70bcb008b0893660265355c",
     lastUpgradeDate: '2025-09-23',
@@ -136,7 +109,7 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
   },
   {
     name: 'SpringSui',
-    logoUrl: spring,
+    logoUrl: "Spring.png",
     contract: '0xc89f4edb8f4dafb97934dbfce11ac132c07759c3bdda6f31d09c7fdca3b80b76',
     upgradecap: "0x4dc657b6c0fe896f4b94fee1ceac96312dde0a36b94e799caaec30deb53dcd67",
     lastUpgradeDate: '2025-12-10',
@@ -153,7 +126,7 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
   },
   {
     name: 'Haedal',
-    logoUrl: Haedal,
+    logoUrl: "Haedal.jpg",
     contract: '0x19e6ea7f5ced4f090e20da794cc80349a03e638940ddb95155a4e301f5f4967c',
     upgradecap: "0xc1c6690f21937f90e6b42f7c916d8e8c942926e3fb9e5c3c5584ae1e91502f25",
     lastUpgradeDate: '2025-10-13',
@@ -170,7 +143,7 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
   },
   {
     name: 'Brag',
-    logoUrl: brag,
+    logoUrl: "brag.jpg",
     contract: '0x93a36744eff6ee002ef32948866098eae032f277e7e702133dd35dc7cbfe1681',
     upgradecap: "0x00fd4132743d99f6a444765b17d27bd5d13dde84a36f2f7f940057f2d2a315a9",
     lastUpgradeDate: '2024-10-13',
@@ -187,7 +160,7 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
   },
   {
     name: 'SavingsGame',
-    logoUrl: savingsgame,
+    logoUrl: "savingsgame.png",
     contract: '0xb95a8704a4e56f7b461c521dd785f11a597e50736fbfb810d000586d77f259fe',
     upgradecap: "0x84d368e8587160c443680e792e8b5b337b5a78e756fbe6885ce4df9a4f682f10",
     lastUpgradeDate: '2025-12-29',
@@ -204,7 +177,7 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
   },
   {
     name: 'Bucket',
-    logoUrl: Bucket,
+    logoUrl: "Bucket.jpg",
     contract: '0x524a37ec411ba112f284508d9cd98265b796bea85db9450c84a42c8b5268885d',
     upgradecap: "0x4035e8134f67518779278b3f3fcf9212249bde705a5f2e04005c686d7cf2f357",
     lastUpgradeDate: '2025-10-21',
@@ -221,7 +194,7 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
   },
   {
     name: 'Scallop',
-    logoUrl: Scallop,
+    logoUrl: "Scallop.jpg",
     contract: '0xd384ded6b9e7f4d2c4c9007b0291ef88fbfed8e709bce83d2da69de2d79d013d',
     upgradecap: "0x38527d154618d1fd5a644b90717fe07cf0e9f26b46b63e9568e611a3f86d5c1a",
     lastUpgradeDate: '2026-01-08',
@@ -238,7 +211,7 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
   },
   {
     name: 'Pawtato Land',
-    logoUrl: Pawtato_Land,
+    logoUrl: "Pawtato_Land.png",
     contract: '0x3b50d91ff28484f58c1c66bd0b15f5c5416c7ddf4e9391b16f0f20c236517ef3',
     upgradecap: "0x3ab44acd8cf9bb4bab22b3f77974043c281ed7bbc9151a90475345bea7015600",
     lastUpgradeDate: '2026-01-08',
@@ -255,7 +228,7 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
   },
   {
     name: 'Sui Name Service',
-    logoUrl: Sui_Name_Service,
+    logoUrl: "Sui_Name_Service.png",
     contract: '0x71af035413ed499710980ed8adb010bbf2cc5cacf4ab37c7710a4bb87eb58ba5',
     upgradecap: "0x9cda28244a0d0de294d2b271e772a9c33eb47d316c59913d7369b545b4af098c",
     lastUpgradeDate: '2026-01-16',

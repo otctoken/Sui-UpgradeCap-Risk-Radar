@@ -2,7 +2,7 @@
 export enum UpgradePolicy {
   Compatible = 0, // Code can change, existing data compatible
   Additive = 128, // Can only add new functions/structs
-  DepOnly = 255,  // Dependency only (effectively immutable logic for existing modules)
+  DepOnly = 192,  // Dependency only (effectively immutable logic for existing modules)
   Immutable = 500,
 }
 

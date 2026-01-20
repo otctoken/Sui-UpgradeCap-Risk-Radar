@@ -4,10 +4,15 @@ import DAppCard from './components/DAppCard';
 import ScoreGuide from './components/ScoreGuide';
 import { MOCK_DAPPS } from './constants';
 import { calculateRiskScore } from './utils';
+
+import {
+  getObjectData, get_object_holder, Recursively_query_the_parent_object_ID_of_the_DF
+  , query_object_wraps_object_ID
+} from './components/GetQueryData';
 // @ts-ignore
 import logo from './public/logo.png'; // 没有红线
 type ViewType = 'dashboard' | 'rules';
-
+const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 function App() {
   const [currentView, setCurrentView] = useState<ViewType>('dashboard');
   const [currentPage, setCurrentPage] = useState(1);
@@ -58,6 +63,30 @@ function App() {
       return acc;
     }, initial);
   }, []);
+  //......
+  useEffect(() => {
+    const tick = async () => {
+      for (const data of MOCK_DAPPS) {
+        if (data.policy < 500) {
+          if (data.customPolicyAddress) {
+
+          } else {
+            const updata = await getObjectData(data.upgradecap)
+            console.log(updata)
+          }
+        } else {
+          console.log(data.name, "✅OK")
+        }
+
+      };
+    }
+    const init = async () => {
+      await sleep(5000)
+      await tick();
+    };
+    init();
+  }, []);
+
 
   // Filter Logic
   const filteredDapps = useMemo(() => {

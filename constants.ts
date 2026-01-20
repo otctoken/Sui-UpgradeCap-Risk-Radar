@@ -1,38 +1,40 @@
 //import { Flag } from 'lucide-react';
 import { DAppRiskProfile, UpgradePolicy, OwnershipType } from './types';
 // @ts-ignore
-import navi from './picture/navi.png'; // 
+import navi from './public/navi.png'; // 
 // @ts-ignore
-import suilend from './picture/suilend.svg'; // 
+import suilend from './public/suilend.svg'; // 
 // @ts-ignore
-import bluefin from './picture/bluefin.jpg'; // 
+import bluefin from './public/bluefin.jpg'; // 
 // @ts-ignore
-import spring from './picture/Spring.png'; // 
+import spring from './public/Spring.png'; // 
 // @ts-ignore
-import alphafiled from './picture/Alphafil.jpg'; // 
+import alphafiled from './public/Alphafil.jpg'; // 
 // @ts-ignore
-import Haedal from './picture/Haedal.jpg'; // 
+import Haedal from './public/Haedal.jpg'; // 
 // @ts-ignore
-import Cetus from './picture/Cetus.png'; // 
+import Cetus from './public/Cetus.png'; // 
 // @ts-ignore
-import Momentum from './picture/Momentum.jpg'; // 
+import Momentum from './public/Momentum.jpg'; // 
 // @ts-ignore
-import brag from './picture/brag.jpg'; // 
+import brag from './public/brag.jpg'; // 
 // @ts-ignore
-import savingsgame from './picture/savingsgame.png'; // 
+import savingsgame from './public/savingsgame.png'; // 
 // @ts-ignore
-import Bucket from './picture/Bucket.jpg'; // 
+import Bucket from './public/Bucket.jpg'; // 
 // @ts-ignore
-import Scallop from './picture/Scallop.jpg'; // 
+import Scallop from './public/Scallop.jpg'; // 
 // @ts-ignore
-import Pawtato_Land from './picture/Pawtato_Land.png'; // 
+import Pawtato_Land from './public/Pawtato_Land.png'; // 
 // @ts-ignore
-import Sui_Name_Service from './picture/Sui_Name_Service.png'; // 
+import Sui_Name_Service from './public/Sui_Name_Service.png'; // 
+
+
 
 export const MOCK_DAPPS: DAppRiskProfile[] = [
   {
     name: 'NaviProtocol',
-    logoUrl: navi,
+    logoUrl: 'navi.png',
     contract: '0xee0041239b89564ce870a7dec5ddc5d114367ab94a1137e90aa0633cb76518e0',
     upgradecap: "0xdba1b40f3537441b51d2848fc0a149610e48e67c1cc48c6ad641767622000623",
     lastUpgradeDate: '2025-11-18',

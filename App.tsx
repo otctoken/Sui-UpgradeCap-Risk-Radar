@@ -5,7 +5,7 @@ import ScoreGuide from './components/ScoreGuide';
 import { MOCK_DAPPS } from './constants';
 import { calculateRiskScore } from './utils';
 // @ts-ignore
-import logo from './picture/logo.png'; // 没有红线
+import logo from './public/logo.png'; // 没有红线
 type ViewType = 'dashboard' | 'rules';
 
 function App() {

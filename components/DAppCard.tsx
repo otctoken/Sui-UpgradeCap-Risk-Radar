@@ -237,7 +237,7 @@ const DAppCard: React.FC<DAppCardProps> = ({ dapp }) => {
                                 {dapp.timelockDurationSeconds > 0 ? (
                                     <>
                                         <span className="text-emerald-400">{formatDuration(dapp.timelockDurationSeconds)}</span>
-                                        <AddressLinkOB_fields address={dapp.timelockAddress} className="text-emerald-400" />
+                                        <AddressLinkOB_fields address={dapp.timelockAddressANFdfParentObject} className="text-emerald-400" />
                                     </>
                                 ) : (
                                     <span className={dapp.ownershipType === OwnershipType.Immutable ? "text-emerald-400" : "text-rose-400"}>

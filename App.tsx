@@ -13,6 +13,44 @@ import {
 import logo from './public/logo.png'; // 没有红线
 type ViewType = 'dashboard' | 'rules';
 const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
+
+function findKeyWithFields(sourceObject: any) {
+  // 定义必须包含的字段
+  const requiredFields = ['id', 'package', 'policy', 'version'];
+
+  // 获取对象的所有 Key
+  const foundKey = Object.keys(sourceObject).find(key => {
+    const value = sourceObject[key];
+
+    // 1. 安全检查：确保 value 是一个对象且不为 null
+    if (!value || typeof value !== 'object') return false;
+
+    // 2. 核心逻辑：检查 value 中是否包含每一个 requiredFields
+    // every 表示 "所有条件都满足才返回 true"
+    return requiredFields.every(field => field in value);
+  });
+
+  return sourceObject[foundKey]; // 如果找到返回 key 字符串 (如 "upgradeCap")，没找到返回 undefined
+}
+async function getdata(data: any) {
+  console.log(data.name)
+  const updata_ = await getObjectData(data.upgradecap)
+  const updata = updata_.asMoveObject.contents.json
+  if (updata.package != data.contract) {
+    console.log(data.name, ":Please update the data.--package")
+  }
+  if (updata.version != data.version) {
+    console.log(data.name, ":Please update the data.--version")
+  }
+  const adder = await get_object_holder(data.upgradecap);
+  if (adder.address != data.upgradecapAddress) {
+    console.log(data.name, ":Please update the data.--upgradecapAddress")
+  }
+  if (updata.policy != data.policy) {
+    console.log(data.name, ":Please update the data.--policy")
+  }
+}
+
 function App() {
   const [currentView, setCurrentView] = useState<ViewType>('dashboard');
   const [currentPage, setCurrentPage] = useState(1);
@@ -64,21 +102,52 @@ function App() {
     }, initial);
   }, []);
   //......
-  useEffect(() => {
+  useEffect(() => {  //0x1f9310238ee9298fb703c3419030b35b22bb1cc37113e3bb5007c99aec79e5b8 DF demo
     const tick = async () => {
-      for (const data of MOCK_DAPPS) {
-        if (data.policy < 500) {
-          if (data.customPolicyAddress) {
-
-          } else {
-            const updata = await getObjectData(data.upgradecap)
-            console.log(updata)
+      try {
+        for (const data of MOCK_DAPPS) {
+          if (data.policy < 500) {
+            if (data.customPolicyAddress) {
+              console.log(data.name)
+              let bool = false
+              const policyOB = await getObjectData(
+                data.timelockAddressANFdfParentObject
+              );
+              const policyOBdata_ = policyOB.asMoveObject.contents.json
+              const policyOBdata = findKeyWithFields(policyOBdata_)
+              if (policyOBdata.version != data.version) {
+                console.log(data.name, ":Please update the data.--version")
+              }
+              if (policyOBdata.package != data.contract) {
+                console.log(data.name, ":Please update the data.--package")
+              }
+              const adder = await get_object_holder(data.timelockAddressANFdfParentObject);
+              if (adder.address != data.upgradecapAddress) {
+                console.log(data.name, ":Please update the data.--upgradecapAddress")
+              }
+              if (policyOBdata.policy != data.policy) {
+                console.log(data.name, ":Please update the data.--policy")
+              }
+              bool = await query_object_wraps_object_ID(policyOB, data.upgradecap)
+              if (!bool) {
+                bool = await Recursively_query_the_parent_object_ID_of_the_DF(data.upgradecap, data.timelockAddressANFdfParentObject)
+              }
+              if (!bool) {
+                console.log(data.name, ":Please update the data.---Strategy changes")
+              }
+              if (data.whetherDF) {
+                await getdata(data)
+              }
+              //await getdata(data)
+            } else {
+              await getdata(data)
+            }
           }
-        } else {
-          console.log(data.name, "✅OK")
-        }
-
-      };
+        };
+      } catch (error) {
+        console.error("net err:", error);
+        return null;
+      }
     }
     const init = async () => {
       await sleep(5000)

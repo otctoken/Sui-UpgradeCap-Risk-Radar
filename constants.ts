@@ -16,7 +16,7 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
     upgradecapAddress: '0x25549f15b144032b4a61921552f6ecbfea13556615f7b45576b12f10d67955e7',//多签地址或单签地址
     ownershipType: OwnershipType.MultiSig, // DAO
     //customPolicyAddress: '0xdef...policy', // Has custom policy
-    timelockAddress: "0",
+    timelockAddressANFdfParentObject: "0",
     timelockDurationSeconds: 0, // 48 Hours
     category: 'Defi|Lending',
     isVerified: true,
@@ -33,7 +33,7 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
     upgradecapAddress: '0xb1ffbc2e1915f44b8f271a703becc1bf8aa79bc22431a58900a102892b783c25',//多签地址或单签地址
     ownershipType: OwnershipType.Single, // DAO
     //customPolicyAddress: '0xdef...policy', // Has custom policy
-    timelockAddress: "0",
+    timelockAddressANFdfParentObject: "0",
     timelockDurationSeconds: 0, // 48 Hours
     category: 'Defi|Lending',
     isVerified: true,
@@ -50,7 +50,7 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
     upgradecapAddress: '0x69242cf0fa3b1c73adaf3450bcb510ba5f3a60ec5d9ad648b2676582b43f7e4a',//多签地址或单签地址
     ownershipType: OwnershipType.Single, // DAO
     //customPolicyAddress: '0xdef...policy', // Has custom policy
-    timelockAddress: "0",
+    timelockAddressANFdfParentObject: "0",
     timelockDurationSeconds: 0, // 48 Hours
     category: 'Defi|DEX',
     isVerified: true,
@@ -67,7 +67,7 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
     upgradecapAddress: '0xdbfd0b17fa804c98f51d552b050fb7f850b85db96fa2a0d79e50119525814a47',//多签地址或单签地址
     ownershipType: OwnershipType.MultiSig, // DAO
     //customPolicyAddress: '0xdef...policy', // Has custom policy
-    timelockAddress: "0",
+    timelockAddressANFdfParentObject: "0",
     timelockDurationSeconds: 0, // 48 Hours
     category: 'Defi|DEX',
     isVerified: true,
@@ -84,7 +84,7 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
     upgradecapAddress: '0x396a933434a340a8932f5a644b2d3a3d8a50f9297f2165eb9127219a06a741f6',//多签地址或单签地址
     ownershipType: OwnershipType.MultiSig, // DAO
     //customPolicyAddress: '0xdef...policy', // Has custom policy
-    timelockAddress: "0",
+    timelockAddressANFdfParentObject: "0",
     timelockDurationSeconds: 0, // 48 Hours
     category: 'Defi|DEX',
     isVerified: true,
@@ -101,7 +101,7 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
     upgradecapAddress: '0xa1eb94d1700652aa85b417b46fa6775575b8b98d3352d864fb5146eb45d335fb',//多签地址或单签地址
     ownershipType: OwnershipType.MultiSig, // DAO
     //customPolicyAddress: '0xdef...policy', // Has custom policy
-    timelockAddress: "0",
+    timelockAddressANFdfParentObject: "0",
     timelockDurationSeconds: 0, // 48 Hours
     category: 'Defi|Lending',
     isVerified: true,
@@ -118,7 +118,7 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
     upgradecapAddress: '0xb1ffbc2e1915f44b8f271a703becc1bf8aa79bc22431a58900a102892b783c25',//多签地址或单签地址
     ownershipType: OwnershipType.Single, // DAO
     //customPolicyAddress: '0xdef...policy', // Has custom policy
-    timelockAddress: "0",
+    timelockAddressANFdfParentObject: "0",
     timelockDurationSeconds: 0, // 48 Hours
     category: 'Staked',
     isVerified: true,
@@ -135,7 +135,7 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
     upgradecapAddress: '0x24ce5d3bf7adc559befdf0e9a3f58e68853e5a4e4901f0f9a1bc336f75db8bb9',//多签地址或单签地址
     ownershipType: OwnershipType.MultiSig, // DAO
     //customPolicyAddress: '0xdef...policy', // Has custom policy
-    timelockAddress: "0",
+    timelockAddressANFdfParentObject: "0",
     timelockDurationSeconds: 0, // 48 Hours
     category: 'Staked',
     isVerified: true,
@@ -152,7 +152,7 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
     upgradecapAddress: '0x0',//多签地址或单签地址
     ownershipType: OwnershipType.Single, // DAO
     //customPolicyAddress: '0xdef...policy', // Has custom policy
-    timelockAddress: "0",
+    timelockAddressANFdfParentObject: "0",
     timelockDurationSeconds: 0, // 48 Hours
     category: 'Game',
     isVerified: true,
@@ -169,7 +169,8 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
     upgradecapAddress: '0x82242fabebc3e6e331c3d5c6de3d34ff965671b75154ec1cb9e00aa437bbfa44',//多签地址或单签地址
     ownershipType: OwnershipType.Single, // DAO
     customPolicyAddress: '0x3513dd3a697b217997e6681a2ecee0ed25f7ec3e033a06ca63df1b78d79d920e', // 策略合约地址
-    timelockAddress: '0x1a3294d785ae4c158426c5eb3a24ac993fe440152ca4bc7865fe8dd27569a023',
+    timelockAddressANFdfParentObject: '0x1a3294d785ae4c158426c5eb3a24ac993fe440152ca4bc7865fe8dd27569a023', //也就是PolicyOBJid
+    whetherDF: false,
     timelockDurationSeconds: 172800, // 48 Hours
     category: 'Game',
     isVerified: true,
@@ -186,7 +187,7 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
     upgradecapAddress: '0x19f528cf4b5d0d8bcbc33c66405d149ea726a4dc1bc773537dc65364d4e58be4',//多签地址或单签地址
     ownershipType: OwnershipType.MultiSig, // DAO
     //customPolicyAddress: '0x3513dd3a697b217997e6681a2ecee0ed25f7ec3e033a06ca63df1b78d79d920e', // 策略合约地址
-    timelockAddress: "0",
+    timelockAddressANFdfParentObject: "0",
     timelockDurationSeconds: 0, // 48 Hours
     category: 'Defi|Lending',
     isVerified: true,
@@ -203,7 +204,7 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
     upgradecapAddress: '0x1226a80ef40bd2e70c6a285b045b9b5d29915a2c5a2d57a2d3032cbdd89a8d5c',//多签地址或单签地址
     ownershipType: OwnershipType.MultiSig, // DAO
     //customPolicyAddress: '0x3513dd3a697b217997e6681a2ecee0ed25f7ec3e033a06ca63df1b78d79d920e', // 策略合约地址
-    timelockAddress: "0",
+    timelockAddressANFdfParentObject: "0",
     timelockDurationSeconds: 0, // 48 Hours
     category: 'Defi|Lending',
     isVerified: true,
@@ -212,15 +213,15 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
   {
     name: 'Pawtato Land',
     logoUrl: "Pawtato_Land.png",
-    contract: '0x3b50d91ff28484f58c1c66bd0b15f5c5416c7ddf4e9391b16f0f20c236517ef3',
+    contract: '0x1dfeb9525015105f40f530593e3b81652d35f2c66f98f33c223aaef0b1d47594',
     upgradecap: "0x3ab44acd8cf9bb4bab22b3f77974043c281ed7bbc9151a90475345bea7015600",
     lastUpgradeDate: '2026-01-08',
-    version: 97,
+    version: 98,
     policy: UpgradePolicy.Compatible,
     upgradecapAddress: '0x89d3a9c91cbfeb9b59335c526b0726262a51f2e0ef97775397feb83d194f4e2c',//多签地址或单签地址
     ownershipType: OwnershipType.Single, // DAO
     //customPolicyAddress: '0x3513dd3a697b217997e6681a2ecee0ed25f7ec3e033a06ca63df1b78d79d920e', // 策略合约地址
-    timelockAddress: "0",
+    timelockAddressANFdfParentObject: "0",
     timelockDurationSeconds: 0, // 48 Hours
     category: 'NFT',
     isVerified: true,
@@ -237,7 +238,7 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
     upgradecapAddress: '0x9b388a6da9dd4f73e0b13abc6100f1141782ef105f6f5e9d986fb6e00f0b2591',//多签地址或单签地址
     ownershipType: OwnershipType.MultiSig, // DAO
     //customPolicyAddress: '0x3513dd3a697b217997e6681a2ecee0ed25f7ec3e033a06ca63df1b78d79d920e', // 策略合约地址
-    timelockAddress: "0",
+    timelockAddressANFdfParentObject: "0",
     timelockDurationSeconds: 0, // 48 Hours
     category: 'NFT',
     isVerified: true,

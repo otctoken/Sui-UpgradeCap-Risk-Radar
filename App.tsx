@@ -61,7 +61,7 @@ function App() {
   const filterRef = useRef<HTMLDivElement>(null);
 
   const itemsPerPage = 10;
-  const categories = ['All', 'Defi|Lending', 'NFT', 'Game', 'Defi|DEX', 'Staked',];
+  const categories = ['All', 'Defi|Lending', 'NFT', 'Game', 'Defi|DEX', 'Staked', "Coin"];
 
   // Close filter dropdown when clicking outside
   useEffect(() => {
@@ -159,7 +159,7 @@ function App() {
 
   // Filter Logic
   const filteredDapps = useMemo(() => {
-    return MOCK_DAPPS.filter(dapp => {
+    const filtered = MOCK_DAPPS.filter(dapp => {
       const searchLower = searchQuery.toLowerCase();
       const matchesSearch =
         dapp.name.toLowerCase().includes(searchLower) ||
@@ -168,6 +168,18 @@ function App() {
       const matchesCategory = selectedCategory === 'All' || dapp.category === selectedCategory;
       return matchesSearch && matchesCategory;
     });
+
+    // 2. 再进行排序 (Sort)
+    // 我们在这里调用 calculateRiskScore 来获取分数，并按 total 降序排列
+    return filtered.sort((a, b) => {
+      const scoreA = calculateRiskScore(a).total;
+      const scoreB = calculateRiskScore(b).total;
+
+      // b - a 表示降序 (由高到低)
+      // a - b 表示升序 (由低到高)
+      return scoreB - scoreA;
+    });
+
   }, [searchQuery, selectedCategory]);
 
   // Pagination Logic
@@ -177,10 +189,18 @@ function App() {
 
   const handlePrevPage = () => {
     if (currentPage > 1) setCurrentPage(p => p - 1);
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth' // 'smooth' 为平滑滚动，如果想要瞬间跳过去可以用 'auto'
+    });
   };
 
   const handleNextPage = () => {
     if (currentPage < totalPages) setCurrentPage(p => p + 1);
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth' // 'smooth' 为平滑滚动，如果想要瞬间跳过去可以用 'auto'
+    });
   };
 
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {

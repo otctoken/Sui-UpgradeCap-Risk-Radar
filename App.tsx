@@ -189,20 +189,17 @@ function App() {
 
   const handlePrevPage = () => {
     if (currentPage > 1) setCurrentPage(p => p - 1);
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth' // 'smooth' 为平滑滚动，如果想要瞬间跳过去可以用 'auto'
-    });
   };
 
   const handleNextPage = () => {
     if (currentPage < totalPages) setCurrentPage(p => p + 1);
+  };
+  useEffect(() => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth' // 'smooth' 为平滑滚动，如果想要瞬间跳过去可以用 'auto'
+      behavior: 'auto' // 如果手机端依然卡顿，可以尝试改为 'auto'
     });
-  };
-
+  }, [currentPage]); // 依赖项是 currentPage
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchQuery(e.target.value);
     setCurrentPage(1);

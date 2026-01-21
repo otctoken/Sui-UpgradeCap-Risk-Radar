@@ -40,6 +40,23 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
     // No controller address because it's immutable/burned
   },
   {
+    name: 'WAL Token',
+    logoUrl: "Walrus_coin.jpg",
+    contract: '0x356a26eb9e012a68958082340d4c4116e7f55615cf27affcff209cf0ae544f59',
+    upgradecap: "0xf45cd2f31729cc7044f0ed77fecef4a2e55b05e3b33de774119368767fb5a113",
+    lastUpgradeDate: '2024-10-13',
+    version: 1,
+    policy: UpgradePolicy.Immutable,
+    upgradecapAddress: '0x0',//多签地址或单签地址
+    ownershipType: OwnershipType.Single, // DAO
+    //customPolicyAddress: '0xdef...policy', // Has custom policy
+    timelockAddressANFdfParentObject: "0",
+    timelockDurationSeconds: 0, // 48 Hours
+    category: 'Coin',
+    isVerified: true,
+    // No controller address because it's immutable/burned
+  },
+  {
     name: 'Bluefin',
     logoUrl: "bluefin.jpg",
     contract: '0xd075338d105482f1527cbfd363d6413558f184dec36d9138a70261e87f486e9c',
@@ -124,6 +141,7 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
     isVerified: true,
     // No controller address because it's immutable/burned
   },
+
   {
     name: 'Haedal',
     logoUrl: "Haedal.jpg",
@@ -244,22 +262,4 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
     isVerified: true,
     // No controller address because it's immutable/burned
   },
-  {
-    name: 'WAL Token',
-    logoUrl: "Walrus_coin.jpg",
-    contract: '0x356a26eb9e012a68958082340d4c4116e7f55615cf27affcff209cf0ae544f59',
-    upgradecap: "0xf45cd2f31729cc7044f0ed77fecef4a2e55b05e3b33de774119368767fb5a113",
-    lastUpgradeDate: '2024-10-13',
-    version: 1,
-    policy: UpgradePolicy.Immutable,
-    upgradecapAddress: '0x0',//多签地址或单签地址
-    ownershipType: OwnershipType.Single, // DAO
-    //customPolicyAddress: '0xdef...policy', // Has custom policy
-    timelockAddressANFdfParentObject: "0",
-    timelockDurationSeconds: 0, // 48 Hours
-    category: 'Coin',
-    isVerified: true,
-    // No controller address because it's immutable/burned
-  },
-
 ];

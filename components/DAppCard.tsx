@@ -51,7 +51,6 @@ const DAppCard: React.FC<DAppCardProps> = ({ dapp }) => {
     // Helper for Controller Label & Color
     const getControllerInfo = () => {
         if (dapp.ownershipType === OwnershipType.Immutable) return { label: 'Burned', color: 'text-emerald-400' };
-        //if (dapp.ownershipType === OwnershipType.SharedTimelock) return { label: 'DAO', color: 'text-emerald-400' };
         if (dapp.ownershipType === OwnershipType.MultiSig) return { label: 'Multisig', color: 'text-amber-400' };
         return { label: 'Single Address', color: 'text-rose-400' };
     };
@@ -136,7 +135,7 @@ const DAppCard: React.FC<DAppCardProps> = ({ dapp }) => {
             <div className="p-4 flex flex-col md:flex-row items-start md:items-center justify-between gap-3 cursor-pointer" onClick={() => setIsExpanded(!isExpanded)}>
 
                 {/* Identity Section */}
-                <div className="flex items-center gap-4 flex-1">
+                <div className="flex items-center gap-4 flex-1 w-full md:w-auto">
                     <div className="relative shrink-0">
                         <img src={dapp.logoUrl} alt={dapp.name} className="w-14 h-14 rounded-xl object-cover border border-slate-700" />
                         <div className="absolute -bottom-1 -right-1 bg-slate-800 rounded-full p-0.5">
@@ -156,7 +155,7 @@ const DAppCard: React.FC<DAppCardProps> = ({ dapp }) => {
                     </div>
                 </div>
 
-                {/* Key Indicators (Desktop) */}
+                {/* Key Indicators (Desktop Only) - 保持不变 */}
                 <div className="hidden md:flex items-center gap-3">
                     <div className="flex flex-col items-end gap-1">
                         <RiskBadge
@@ -171,19 +170,44 @@ const DAppCard: React.FC<DAppCardProps> = ({ dapp }) => {
                     </div>
                 </div>
 
-                {/* Score Circle */}
-                <div className="flex items-center gap-4">
+                {/* Score Circle & Mobile Indicators */}
+                {/* 修改：在手机端 w-full justify-between 实现底部横排布局 */}
+                <div className="flex items-center gap-4 w-full md:w-auto justify-between md:justify-end mt-2 md:mt-0">
+
+                    {/* Desktop Score (Hidden on mobile) */}
                     <div className="text-right hidden md:block">
                         <div className="text-xs text-slate-500 font-medium uppercase tracking-wider">Risk Score</div>
                         <div className={`text-2xl font-black ${style.text}`}>{scores.total}</div>
                     </div>
 
-                    <div className={`md:hidden flex items-center gap-2 ${style.text} font-bold`}>
-                        <ShieldCheck className="w-5 h-5" />
-                        <span>{scores.total} / 100</span>
+                    {/* Mobile: Score + Badge + Timer Row */}
+                    {/* 新增：手机端专属的横向信息栏 */}
+                    <div className="md:hidden flex items-center gap-3">
+                        {/* Score */}
+                        <div className={`flex items-center gap-1.5 ${style.text} font-bold shrink-0`}>
+                            <ShieldCheck className="w-4 h-4" />
+                            <span>{scores.total}/100</span>
+                        </div>
+
+                        {/* Divider */}
+                        <div className="w-px h-3 bg-slate-700 shrink-0"></div>
+
+                        {/* Badge & Timer */}
+                        <div className="flex items-center gap-2 shrink-0">
+                            <RiskBadge
+                                label={badgeConfig.label}
+                                variant={badgeConfig.variant}
+                                className="text-[10px] py-0.5 px-2"
+                            />
+                            <div className="flex items-center gap-1 text-[10px] text-slate-500 font-medium">
+                                <Clock className="w-3 h-3" />
+                                <span className="whitespace-nowrap">{formatDuration(dapp.timelockDurationSeconds)}</span>
+                            </div>
+                        </div>
                     </div>
 
-                    <button className="text-slate-500 hover:text-slate-300 transition-colors">
+                    {/* Chevron Button */}
+                    <button className="text-slate-500 hover:text-slate-300 transition-colors shrink-0">
                         {isExpanded ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
                     </button>
                 </div>
@@ -199,7 +223,6 @@ const DAppCard: React.FC<DAppCardProps> = ({ dapp }) => {
                     </div>
 
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-y-5 gap-x-8">
-
                         {/* 1. UpgradeCap */}
                         <AnalysisItem title="1. UpgradeCap">
                             <span className={clsx("font-mono text-base", getUpgradeCapColor())}>

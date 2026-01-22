@@ -536,4 +536,23 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
     isVerified: true,
     // No controller address because it's immutable/burned
   },
+  {
+    name: 'Volo',
+    logoUrl: "Volo.jpg",
+    contract: '0x68d22cf8bdbcd11ecba1e094922873e4080d4d11133e2443fddda0bfd11dae20',
+    upgradecap: "0x7079eadfd6603dba95a9377dc8e3eb8c3679c476ac33429937ae09c3fa74d376",
+    lastUpgradeDate: '2025-12-29',
+    version: 2,
+    policy: UpgradePolicy.Compatible,
+    upgradecapAddress: '0x26bad7008d5a5c5dfb9c7906bf066850100bc14ca2618f167b529d8157bb095c',//多签地址或单签地址，如果Dao则是规则对象地址 == timelockAddressANFdfParentObject
+    ownershipType: OwnershipType.Dao, // DAO
+    whetherShared: true,
+    customPolicyAddress: '0x00e3ad2105b73e8f7f713f963063a9776a683a5ffd0d53632c1af0d461d427f1', // 策略合约地址
+    timelockAddressANFdfParentObject: '0x26bad7008d5a5c5dfb9c7906bf066850100bc14ca2618f167b529d8157bb095c', //也就是PolicyOBJid
+    whetherDF: false,
+    timelockDurationSeconds: 0, // 48 Hours
+    category: 'Staked',
+    isVerified: true,
+    // No controller address because it's immutable/burned
+  },
 ];

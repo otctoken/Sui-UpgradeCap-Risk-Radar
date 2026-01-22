@@ -15,22 +15,35 @@ type ViewType = 'dashboard' | 'rules';
 const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
 function findKeyWithFields(sourceObject: any) {
-  // 定义必须包含的字段
   const requiredFields = ['id', 'package', 'policy', 'version'];
 
-  // 获取对象的所有 Key
-  const foundKey = Object.keys(sourceObject).find(key => {
-    const value = sourceObject[key];
+  // 1. 基础检查：如果当前节点不是对象或是 null，直接停止
+  if (!sourceObject || typeof sourceObject !== 'object') {
+    return undefined;
+  }
 
-    // 1. 安全检查：确保 value 是一个对象且不为 null
-    if (!value || typeof value !== 'object') return false;
+  // 2. 检查当前对象“本身”是否就是我们要找的目标
+  // (检查当前 sourceObject 是否同时拥有所有 requiredFields)
+  const isMatch = requiredFields.every(field => field in sourceObject);
+  if (isMatch) {
+    return sourceObject; // 找到了！直接返回这个对象
+  }
 
-    // 2. 核心逻辑：检查 value 中是否包含每一个 requiredFields
-    // every 表示 "所有条件都满足才返回 true"
-    return requiredFields.every(field => field in value);
-  });
+  // 3. 如果当前对象不是目标，则“递归”遍历它的每一个子属性
+  for (const key of Object.keys(sourceObject)) {
+    const childValue = sourceObject[key];
 
-  return sourceObject[foundKey]; // 如果找到返回 key 字符串 (如 "upgradeCap")，没找到返回 undefined
+    // 递归调用自己，去更深一层寻找
+    const found = findKeyWithFields(childValue);
+
+    // 如果在深层找到了，就把它层层传递出来
+    if (found) {
+      return found;
+    }
+  }
+
+  // 遍历完所有分支都没找到
+  return undefined;
 }
 async function getdata(data: any) {
   console.log(data.name)
@@ -122,8 +135,16 @@ function App() {
                 console.log(data.name, ":Please update the data.--package")
               }
               const adder = await get_object_holder(data.timelockAddressANFdfParentObject);
-              if (adder.address != data.upgradecapAddress) {
-                console.log(data.name, ":Please update the data.--upgradecapAddress")
+
+              if (!data.whetherShared) {
+                if (adder.address != data.upgradecapAddress) {
+                  console.log(data.name, ":Please update the data.--upgradecapAddress")
+                }
+              } else {
+
+                if (adder.type != "Shared") {
+                  console.log(data.name, ":Please update the data.--upgradecapAddress")
+                }
               }
               if (policyOBdata.policy != data.policy) {
                 console.log(data.name, ":Please update the data.--policy")

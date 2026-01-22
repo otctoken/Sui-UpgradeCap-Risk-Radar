@@ -527,6 +527,7 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
     policy: UpgradePolicy.Compatible,
     upgradecapAddress: '0x5c9dacf5a678ea15b8569d65960330307e23d429289ca380e665b1aa175ebeca',//多签地址或单签地址，如果Dao则是规则对象地址 == timelockAddressANFdfParentObject
     ownershipType: OwnershipType.Dao, // DAO
+    whetherShared: true,
     customPolicyAddress: '0x01aca2702b2402f13eacdf9f3e49f5d1bdd3ec5cc7d11847cf8acbaef1cb6d5c', // 策略合约地址
     timelockAddressANFdfParentObject: '0x5c9dacf5a678ea15b8569d65960330307e23d429289ca380e665b1aa175ebeca', //也就是PolicyOBJid
     whetherDF: false,

@@ -35,6 +35,7 @@ export interface DAppRiskProfile {
   customPolicyAddress?: string;   // The address of the custom policy package/object (if exists)
   timelockAddressANFdfParentObject?: string;       // The address of the timelock object (if exists)
   whetherDF?: boolean;
+  whetherShared?: boolean;
 
   // Metadata for scoring
   multiSigThreshold?: string; // e.g., "3/5"

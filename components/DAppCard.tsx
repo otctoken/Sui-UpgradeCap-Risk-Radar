@@ -52,6 +52,7 @@ const DAppCard: React.FC<DAppCardProps> = ({ dapp }) => {
     const getControllerInfo = () => {
         if (dapp.ownershipType === OwnershipType.Immutable) return { label: 'Burned', color: 'text-emerald-400' };
         if (dapp.ownershipType === OwnershipType.MultiSig) return { label: 'Multisig', color: 'text-amber-400' };
+        if (dapp.ownershipType === OwnershipType.Dao) return { label: 'Dao', color: 'text-amber-400' };
         return { label: 'Single Address', color: 'text-rose-400' };
     };
 
@@ -81,6 +82,20 @@ const DAppCard: React.FC<DAppCardProps> = ({ dapp }) => {
         return (
             <a
                 href={`https://suiscan.xyz/mainnet/account/${address}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={clsx("inline-flex items-center gap-1 hover:underline decoration-dashed underline-offset-4", className)}
+                onClick={(e) => e.stopPropagation()}
+            >
+                <ExternalLink className="w-3 h-3" />
+            </a>
+        );
+    };
+    const AddressLinkDao = ({ address, className }: { address?: string, className?: string }) => {
+        if (!address) return null;
+        return (
+            <a
+                href={`https://suiscan.xyz/mainnet/object/${address}/fields`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={clsx("inline-flex items-center gap-1 hover:underline decoration-dashed underline-offset-4", className)}
@@ -236,7 +251,13 @@ const DAppCard: React.FC<DAppCardProps> = ({ dapp }) => {
                                 <span className={clsx("font-medium", controllerInfo.color)}>
                                     {controllerInfo.label}
                                 </span>
-                                {dapp.upgradecapAddress && <AddressLink address={dapp.upgradecapAddress} className={controllerInfo.color} />}
+                                {dapp.upgradecapAddress && (
+                                    dapp.ownershipType === "Dao" ? (
+                                        <AddressLinkDao address={dapp.upgradecapAddress} className={controllerInfo.color} />
+                                    ) : (
+                                        <AddressLink address={dapp.upgradecapAddress} className={controllerInfo.color} />
+                                    )
+                                )}
                             </div>
                         </AnalysisItem>
 

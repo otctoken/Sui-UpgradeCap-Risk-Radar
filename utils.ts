@@ -27,6 +27,7 @@ export const calculateRiskScore = (dapp: DAppRiskProfile): RiskScoreBreakdown =>
     //case OwnershipType.Immutable: controllerScore = 30; break;
     case OwnershipType.MultiSig: controllerScore = 10; break;
     case OwnershipType.Single: default: controllerScore = 0; break;
+    case OwnershipType.Dao: controllerScore = 10; break;
   }
 
   // 3. Upgrade Policy (Max 10)

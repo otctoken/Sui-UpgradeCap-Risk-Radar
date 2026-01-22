@@ -11,6 +11,7 @@ export enum OwnershipType {
   Single = 'Single Address',
   MultiSig = 'MultiSig',
   Immutable = "500",
+  Dao = 'Dao',
 }
 
 // Risk Level Definition

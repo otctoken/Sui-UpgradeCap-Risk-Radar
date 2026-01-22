@@ -48,7 +48,7 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
     version: 1,
     policy: UpgradePolicy.Immutable,
     upgradecapAddress: '0x0',//多签地址或单签地址
-    ownershipType: OwnershipType.Single, // DAO
+    ownershipType: OwnershipType.Immutable, // DAO
     //customPolicyAddress: '0xdef...policy', // Has custom policy
     timelockAddressANFdfParentObject: "0",
     timelockDurationSeconds: 0, // 48 Hours
@@ -168,7 +168,7 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
     version: 1,
     policy: UpgradePolicy.Immutable,
     upgradecapAddress: '0x0',//多签地址或单签地址
-    ownershipType: OwnershipType.Single, // DAO
+    ownershipType: OwnershipType.Immutable, // DAO
     //customPolicyAddress: '0xdef...policy', // Has custom policy
     timelockAddressANFdfParentObject: "0",
     timelockDurationSeconds: 0, // 48 Hours
@@ -517,5 +517,22 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
     isVerified: true,
     category: 'Defi|DEX',
   },
-
+  {
+    name: 'Ferra',
+    logoUrl: "Ferra.jpg",
+    contract: '0x01aca2702b2402f13eacdf9f3e49f5d1bdd3ec5cc7d11847cf8acbaef1cb6d5c',
+    upgradecap: "0x13bd64310147dcaa5687af515de25c71fea048233a228ce63fcfcc64ca587585",
+    lastUpgradeDate: '2025-12-29',
+    version: 2,
+    policy: UpgradePolicy.Compatible,
+    upgradecapAddress: '0x5c9dacf5a678ea15b8569d65960330307e23d429289ca380e665b1aa175ebeca',//多签地址或单签地址，如果Dao则是规则对象地址 == timelockAddressANFdfParentObject
+    ownershipType: OwnershipType.Dao, // DAO
+    customPolicyAddress: '0x01aca2702b2402f13eacdf9f3e49f5d1bdd3ec5cc7d11847cf8acbaef1cb6d5c', // 策略合约地址
+    timelockAddressANFdfParentObject: '0x5c9dacf5a678ea15b8569d65960330307e23d429289ca380e665b1aa175ebeca', //也就是PolicyOBJid
+    whetherDF: false,
+    timelockDurationSeconds: 0, // 48 Hours
+    category: 'Defi|DEX',
+    isVerified: true,
+    // No controller address because it's immutable/burned
+  },
 ];

@@ -555,4 +555,20 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
     isVerified: true,
     // No controller address because it's immutable/burned
   },
+  {
+    name: 'ZO',
+    logoUrl: 'ZO.jpg',
+    contract: '0x5448d5e02c005816925c8c00ff0fd9bc6aef2cde5d1f46323b55ae60bc7e99fd',
+    upgradecap: '0x2092387c072fe18f91b57b9dde362f758259ee88d993a5faf569b4f2eb288b12',
+    lastUpgradeDate: '2026-01-01',
+    version: 34,
+    policy: UpgradePolicy.Compatible,
+    upgradecapAddress: '0x9399c7f4aae1db1dfdea97d93f738e2fbef1f51e8ca015a456056ea951091bdc',
+    ownershipType: OwnershipType.Single,
+    timelockAddressANFdfParentObject: '0',
+    timelockDurationSeconds: 0,
+    isVerified: true,
+    category: 'Defi|DEX',
+  },
+
 ];

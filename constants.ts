@@ -230,7 +230,7 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
   },
   {
     name: 'Pawtato Land',
-    logoUrl: "Pawtato_Land.png",
+    logoUrl: "Pawtato_Finance.jpg",
     contract: '0x1dfeb9525015105f40f530593e3b81652d35f2c66f98f33c223aaef0b1d47594',
     upgradecap: "0x3ab44acd8cf9bb4bab22b3f77974043c281ed7bbc9151a90475345bea7015600",
     lastUpgradeDate: '2026-01-08',
@@ -241,7 +241,7 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
     //customPolicyAddress: '0x3513dd3a697b217997e6681a2ecee0ed25f7ec3e033a06ca63df1b78d79d920e', // 策略合约地址
     timelockAddressANFdfParentObject: "0",
     timelockDurationSeconds: 0, // 48 Hours
-    category: 'NFT',
+    category: 'Game',
     isVerified: true,
     // No controller address because it's immutable/burned
   },
@@ -570,5 +570,21 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
     isVerified: true,
     category: 'Defi|DEX',
   },
+  {
+    name: 'Lombard',
+    logoUrl: 'Lombard.jpg',
+    contract: '0xa1ae9afcd3ee1f7b082580c100cb3dbcba03713112638f86d8b5a5026b025253',
+    upgradecap: '0x15494d9b008413c03b0c1ec70e9eedf7bf95e77b2bcdd406d544907c5dec0a29',
+    lastUpgradeDate: '2026-01-01',
+    version: 1,
+    policy: UpgradePolicy.Compatible,
+    upgradecapAddress: '0xbfde966bacd4260852155f7b523ef157f0b75a0e1e8a0784e463c3ef0bb69deb',
+    ownershipType: OwnershipType.MultiSig,
+    timelockAddressANFdfParentObject: '0',
+    timelockDurationSeconds: 0,
+    isVerified: true,
+    category: 'Staked',
+  },
+
 
 ];

@@ -585,6 +585,37 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
     isVerified: true,
     category: 'Staked',
   },
+  {
+    name: 'Agora',
+    logoUrl: 'Agora.jpg',
+    contract: '0x2053d08c1e2bd02791056171aab0fd12bd7cd7efad2ab8f6b9c8902f14df2ff2',
+    upgradecap: '0x6c48e6b81c0513f77e84dda0eddf65afb84c12ac975e41d8e5c33ef726e1cfbb',
+    lastUpgradeDate: '2026-01-01',
+    version: 1,
+    policy: UpgradePolicy.Compatible,
+    upgradecapAddress: '0x357b8be077a7c93278262c6f53e887250772c26fb28b5e16a8cddf2bec404816',
+    ownershipType: OwnershipType.Single,
+    timelockAddressANFdfParentObject: '0',
+    timelockDurationSeconds: 0,
+    isVerified: true,
+    category: 'Coin',
+  },
+  {
+    name: 'Trade Port',
+    logoUrl: 'Trade_Port.jpg',
+    contract: '0x6cfe7388ccf732432906d7faebcc33fd91e11d4c2f8cb3ae0082b8d3269e3d5b',
+    upgradecap: '0x05d3a6e7abd70313fb96fed56240c2071917d2ca41b744deca1f3f1bb1d1021d',
+    lastUpgradeDate: '2026-01-01',
+    version: 3,
+    policy: UpgradePolicy.Compatible,
+    upgradecapAddress: '0x1565313b747dbdaf2d9d82709461018c43dafa495543d9923e710b1c6535d253',
+    ownershipType: OwnershipType.MultiSig,
+    timelockAddressANFdfParentObject: '0',
+    timelockDurationSeconds: 0,
+    isVerified: true,
+    category: 'Defi|DEX',
+  },
+
 
 
 ];

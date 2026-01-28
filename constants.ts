@@ -231,10 +231,10 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
   {
     name: 'Pawtato Land',
     logoUrl: "Pawtato_Finance.jpg",
-    contract: '0x1dfeb9525015105f40f530593e3b81652d35f2c66f98f33c223aaef0b1d47594',
+    contract: '0x36beaf844c0e9eeaad950a74d777627c59cfb8772e55425099b1edd61133fea2',
     upgradecap: "0x3ab44acd8cf9bb4bab22b3f77974043c281ed7bbc9151a90475345bea7015600",
     lastUpgradeDate: '2026-01-08',
-    version: 98,
+    version: 100,
     policy: UpgradePolicy.Compatible,
     upgradecapAddress: '0x89d3a9c91cbfeb9b59335c526b0726262a51f2e0ef97775397feb83d194f4e2c',//多签地址或单签地址
     ownershipType: OwnershipType.Single, // DAO

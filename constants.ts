@@ -243,7 +243,7 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
     timelockDurationSeconds: 0, // 48 Hour
     category: 'Game',
     isVerified: true,
-    // No controller address because it's immutable/burned
+    // No controller address because it's immutable/burne
   },
   {
     name: 'Sui Name Service',

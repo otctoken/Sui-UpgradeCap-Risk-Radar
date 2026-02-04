@@ -240,7 +240,7 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
     ownershipType: OwnershipType.Single, // DAO
     //customPolicyAddress: '0x3513dd3a697b217997e6681a2ecee0ed25f7ec3e033a06ca63df1b78d79d920e', // 策略合约地址
     timelockAddressANFdfParentObject: "0",
-    timelockDurationSeconds: 0, // 48 Hours
+    timelockDurationSeconds: 0, // 48 Hour
     category: 'Game',
     isVerified: true,
     // No controller address because it's immutable/burned

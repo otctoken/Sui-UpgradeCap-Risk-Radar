@@ -25,7 +25,7 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
   {
     name: 'SuiLend',
     logoUrl: "suilend.svg",
-    contract: '0x2d2a5129b8f07061d697c1b1729a06e696bf3b19c865a869055efba83759b04b',
+    contract: '0xdf48a8edf980a895be1719a74801308ebf634fb4d759017f7650d96196bd14e8',
     upgradecap: "0x3d4ef1859c3ee9fc72858f588b56a09da5466e64f8cc4e90a7b3b909fba8a7ae",
     lastUpgradeDate: '2026-01-06',
     version: 17,
@@ -231,7 +231,7 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
   {
     name: 'Pawtato Land',
     logoUrl: "Pawtato_Finance.jpg",
-    contract: '0x36beaf844c0e9eeaad950a74d777627c59cfb8772e55425099b1edd61133fea2',
+    contract: '0xbcbe92358c9403125596933ea78812ee557f0c17c81c41615233bf18f3af8c15',
     upgradecap: "0x3ab44acd8cf9bb4bab22b3f77974043c281ed7bbc9151a90475345bea7015600",
     lastUpgradeDate: '2026-01-08',
     version: 100,
@@ -558,7 +558,7 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
   {
     name: 'ZO',
     logoUrl: 'ZO.jpg',
-    contract: '0x5448d5e02c005816925c8c00ff0fd9bc6aef2cde5d1f46323b55ae60bc7e99fd',
+    contract: '0x99d8cd4162f6999bd11dca1c6973137ae457c3ee02785d9349442db972ab7445',
     upgradecap: '0x2092387c072fe18f91b57b9dde362f758259ee88d993a5faf569b4f2eb288b12',
     lastUpgradeDate: '2026-01-01',
     version: 34,

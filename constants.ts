@@ -28,7 +28,7 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
     contract: '0xdf48a8edf980a895be1719a74801308ebf634fb4d759017f7650d96196bd14e8',
     upgradecap: "0x3d4ef1859c3ee9fc72858f588b56a09da5466e64f8cc4e90a7b3b909fba8a7ae",
     lastUpgradeDate: '2026-01-06',
-    version: 17,
+    version: 18,
     policy: UpgradePolicy.Compatible,
     upgradecapAddress: '0xb1ffbc2e1915f44b8f271a703becc1bf8aa79bc22431a58900a102892b783c25',//多签地址或单签地址
     ownershipType: OwnershipType.Single, // DAO
@@ -234,7 +234,7 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
     contract: '0xbcbe92358c9403125596933ea78812ee557f0c17c81c41615233bf18f3af8c15',
     upgradecap: "0x3ab44acd8cf9bb4bab22b3f77974043c281ed7bbc9151a90475345bea7015600",
     lastUpgradeDate: '2026-01-08',
-    version: 100,
+    version: 101,
     policy: UpgradePolicy.Compatible,
     upgradecapAddress: '0x89d3a9c91cbfeb9b59335c526b0726262a51f2e0ef97775397feb83d194f4e2c',//多签地址或单签地址
     ownershipType: OwnershipType.Single, // DAO
@@ -561,7 +561,7 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
     contract: '0x99d8cd4162f6999bd11dca1c6973137ae457c3ee02785d9349442db972ab7445',
     upgradecap: '0x2092387c072fe18f91b57b9dde362f758259ee88d993a5faf569b4f2eb288b12',
     lastUpgradeDate: '2026-01-01',
-    version: 34,
+    version: 35,
     policy: UpgradePolicy.Compatible,
     upgradecapAddress: '0x9399c7f4aae1db1dfdea97d93f738e2fbef1f51e8ca015a456056ea951091bdc',
     ownershipType: OwnershipType.Single,

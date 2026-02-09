@@ -127,10 +127,10 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
   {
     name: 'SpringSui',
     logoUrl: "Spring.png",
-    contract: '0xc89f4edb8f4dafb97934dbfce11ac132c07759c3bdda6f31d09c7fdca3b80b76',
+    contract: '0xf89509a8b32205a362921d58a5a0b0bfb13981122a5a0dc49eef7947d4dd21a2',
     upgradecap: "0x4dc657b6c0fe896f4b94fee1ceac96312dde0a36b94e799caaec30deb53dcd67",
     lastUpgradeDate: '2025-12-10',
-    version: 7,
+    version: 8,
     policy: UpgradePolicy.Compatible,
     upgradecapAddress: '0xb1ffbc2e1915f44b8f271a703becc1bf8aa79bc22431a58900a102892b783c25',//多签地址或单签地址
     ownershipType: OwnershipType.Single, // DAO
@@ -558,10 +558,10 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
   {
     name: 'ZO',
     logoUrl: 'ZO.jpg',
-    contract: '0x99d8cd4162f6999bd11dca1c6973137ae457c3ee02785d9349442db972ab7445',
+    contract: '0xf89509a8b32205a362921d58a5a0b0bfb13981122a5a0dc49eef7947d4dd21a2',
     upgradecap: '0x2092387c072fe18f91b57b9dde362f758259ee88d993a5faf569b4f2eb288b12',
     lastUpgradeDate: '2026-01-01',
-    version: 35,
+    version: 37,
     policy: UpgradePolicy.Compatible,
     upgradecapAddress: '0x9399c7f4aae1db1dfdea97d93f738e2fbef1f51e8ca015a456056ea951091bdc',
     ownershipType: OwnershipType.Single,

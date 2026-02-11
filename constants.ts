@@ -8,10 +8,10 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
   {
     name: 'NaviProtocol',
     logoUrl: 'navi.png',
-    contract: '0xee0041239b89564ce870a7dec5ddc5d114367ab94a1137e90aa0633cb76518e0',
+    contract: '0x1e4a13a0494d5facdbe8473e74127b838c2d446ecec0ce262e2eddafa77259cb',
     upgradecap: "0xdba1b40f3537441b51d2848fc0a149610e48e67c1cc48c6ad641767622000623",
     lastUpgradeDate: '2025-11-18',
-    version: 23,
+    version: 24,
     policy: UpgradePolicy.Compatible,
     upgradecapAddress: '0x25549f15b144032b4a61921552f6ecbfea13556615f7b45576b12f10d67955e7',//多签地址或单签地址
     ownershipType: OwnershipType.MultiSig, // DAO
@@ -558,7 +558,7 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
   {
     name: 'ZO',
     logoUrl: 'ZO.jpg',
-    contract: '0xf89509a8b32205a362921d58a5a0b0bfb13981122a5a0dc49eef7947d4dd21a2',
+    contract: '0x99d8cd4162f6999bd11dca1c6973137ae457c3ee02785d9349442db972ab7445',
     upgradecap: '0x2092387c072fe18f91b57b9dde362f758259ee88d993a5faf569b4f2eb288b12',
     lastUpgradeDate: '2026-01-01',
     version: 37,

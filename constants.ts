@@ -179,10 +179,10 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
   {
     name: 'SavingsGame',
     logoUrl: "savingsgame.png",
-    contract: '0xb95a8704a4e56f7b461c521dd785f11a597e50736fbfb810d000586d77f259fe',
+    contract: '0x64d8687584ce9e2f0a8f9a4396b877b41d5f84999a9b1947d23d82c074e79984',
     upgradecap: "0x84d368e8587160c443680e792e8b5b337b5a78e756fbe6885ce4df9a4f682f10",
     lastUpgradeDate: '2025-12-29',
-    version: 1,
+    version: 2,
     policy: UpgradePolicy.Compatible,
     upgradecapAddress: '0x82242fabebc3e6e331c3d5c6de3d34ff965671b75154ec1cb9e00aa437bbfa44',//多签地址或单签地址
     ownershipType: OwnershipType.Single, // DAO

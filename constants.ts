@@ -25,10 +25,10 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
   {
     name: 'SuiLend',
     logoUrl: "suilend.svg",
-    contract: '0xdf48a8edf980a895be1719a74801308ebf634fb4d759017f7650d96196bd14e8',
+    contract: '0x16273556ccb509904a6c31b3a2d3c73cf763665a945b41798ceae92de95893dc',
     upgradecap: "0x3d4ef1859c3ee9fc72858f588b56a09da5466e64f8cc4e90a7b3b909fba8a7ae",
     lastUpgradeDate: '2026-01-06',
-    version: 18,
+    version: 19,
     policy: UpgradePolicy.Compatible,
     upgradecapAddress: '0xb1ffbc2e1915f44b8f271a703becc1bf8aa79bc22431a58900a102892b783c25',//多签地址或单签地址
     ownershipType: OwnershipType.Single, // DAO
@@ -127,10 +127,10 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
   {
     name: 'SpringSui',
     logoUrl: "Spring.png",
-    contract: '0xf89509a8b32205a362921d58a5a0b0bfb13981122a5a0dc49eef7947d4dd21a2',
+    contract: '0x47c4b62aed92c5ae308ecd00253b64b3568ad97e6fb11e54b3d1ac5ed7be19ab',
     upgradecap: "0x4dc657b6c0fe896f4b94fee1ceac96312dde0a36b94e799caaec30deb53dcd67",
     lastUpgradeDate: '2025-12-10',
-    version: 8,
+    version: 10,
     policy: UpgradePolicy.Compatible,
     upgradecapAddress: '0xb1ffbc2e1915f44b8f271a703becc1bf8aa79bc22431a58900a102892b783c25',//多签地址或单签地址
     ownershipType: OwnershipType.Single, // DAO
@@ -214,10 +214,10 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
   {
     name: 'Scallop',
     logoUrl: "Scallop.jpg",
-    contract: '0xd384ded6b9e7f4d2c4c9007b0291ef88fbfed8e709bce83d2da69de2d79d013d',
+    contract: '0xde5c09ad171544aa3724dc67216668c80e754860f419136a68d78504eb2e2805',
     upgradecap: "0x38527d154618d1fd5a644b90717fe07cf0e9f26b46b63e9568e611a3f86d5c1a",
     lastUpgradeDate: '2026-01-08',
-    version: 17,
+    version: 19,
     policy: UpgradePolicy.Compatible,
     upgradecapAddress: '0x1226a80ef40bd2e70c6a285b045b9b5d29915a2c5a2d57a2d3032cbdd89a8d5c',//多签地址或单签地址
     ownershipType: OwnershipType.MultiSig, // DAO
@@ -231,10 +231,10 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
   {
     name: 'Pawtato Land',
     logoUrl: "Pawtato_Finance.jpg",
-    contract: '0xbcbe92358c9403125596933ea78812ee557f0c17c81c41615233bf18f3af8c15',
+    contract: '0xe5fc3d2700d0e92edaf5ff53872715d87c4c981f49049150d5c2f71feafe2dd4',
     upgradecap: "0x3ab44acd8cf9bb4bab22b3f77974043c281ed7bbc9151a90475345bea7015600",
     lastUpgradeDate: '2026-01-08',
-    version: 101,
+    version: 102,
     policy: UpgradePolicy.Compatible,
     upgradecapAddress: '0x89d3a9c91cbfeb9b59335c526b0726262a51f2e0ef97775397feb83d194f4e2c',//多签地址或单签地址
     ownershipType: OwnershipType.Single, // DAO
@@ -370,10 +370,10 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
   {
     name: 'Mole',
     logoUrl: 'Mole.jpg',
-    contract: '0xd79f275b0641176450380d18bcfc243ac0447ff6352a719f677f857bf678f98a',
+    contract: '0xf4acac99393b0c5952438c2cbef62a7fa4772c051133acd12be8b04dec1f897c',
     upgradecap: '0x59be9be45dd5c033360f102f695ee4ba1f2275eff7c014c893a89a48bca4cebf',
     lastUpgradeDate: '2026-01-01',
-    version: 20,
+    version: 21,
     policy: UpgradePolicy.Compatible,
     upgradecapAddress: '0x79d0b16ddeea60be054d1610f8566a2cdd5af103204f70826eb85d57f0b373a4',
     ownershipType: OwnershipType.Single,
@@ -430,10 +430,10 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
   {
     name: 'Typus Finance',
     logoUrl: 'Typus_Finance.jpg',
-    contract: '0xff833c8378057598cb2a397a08ca22606a1aa5a46b76eb4aee0e657142baa45e',
+    contract: '0xf669ac0bf6f1043fc5deaa3e10f8510a95580840f21ed3a489b47fa7bfcdad6c',
     upgradecap: '0xb05e11dfdc0f44e29ed1d49090fdf90e3d0b3d1123974c31d9da174a007c6642',
     lastUpgradeDate: '2026-01-01',
-    version: 41,
+    version: 42,
     policy: UpgradePolicy.Compatible,
     upgradecapAddress: '0xb9a09efd534d29cc9f990db26b2dab00289f32de0cdcefa68c6808de208bc9cb',
     ownershipType: OwnershipType.MultiSig,
@@ -558,10 +558,10 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
   {
     name: 'ZO',
     logoUrl: 'ZO.jpg',
-    contract: '0x99d8cd4162f6999bd11dca1c6973137ae457c3ee02785d9349442db972ab7445',
+    contract: '0x60d75af192054ac52dce44b496f8d4c2ab27d4fd3dd0737aa69902b3170a78b7',
     upgradecap: '0x2092387c072fe18f91b57b9dde362f758259ee88d993a5faf569b4f2eb288b12',
     lastUpgradeDate: '2026-01-01',
-    version: 37,
+    version: 38,
     policy: UpgradePolicy.Compatible,
     upgradecapAddress: '0x9399c7f4aae1db1dfdea97d93f738e2fbef1f51e8ca015a456056ea951091bdc',
     ownershipType: OwnershipType.Single,
@@ -603,10 +603,10 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
   {
     name: 'Trade Port',
     logoUrl: 'Trade_Port.jpg',
-    contract: '0x6cfe7388ccf732432906d7faebcc33fd91e11d4c2f8cb3ae0082b8d3269e3d5b',
+    contract: '0xc99caf110751c3c615c64a27c81bf5c829e39b21a32613b9e4f87ca69cb8ec38',
     upgradecap: '0x05d3a6e7abd70313fb96fed56240c2071917d2ca41b744deca1f3f1bb1d1021d',
     lastUpgradeDate: '2026-01-01',
-    version: 3,
+    version: 4,
     policy: UpgradePolicy.Compatible,
     upgradecapAddress: '0x1565313b747dbdaf2d9d82709461018c43dafa495543d9923e710b1c6535d253',
     ownershipType: OwnershipType.MultiSig,

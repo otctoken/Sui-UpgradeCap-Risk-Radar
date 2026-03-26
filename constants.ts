@@ -25,10 +25,10 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
   {
     name: 'SuiLend',
     logoUrl: "suilend.svg",
-    contract: '0x16273556ccb509904a6c31b3a2d3c73cf763665a945b41798ceae92de95893dc',
+    contract: '0x3d4353f3bd3565329655e6b77bc2abfd31e558b86662ebd078ae453d416bc10f',
     upgradecap: "0x3d4ef1859c3ee9fc72858f588b56a09da5466e64f8cc4e90a7b3b909fba8a7ae",
     lastUpgradeDate: '2026-01-06',
-    version: 19,
+    version: 20,
     policy: UpgradePolicy.Compatible,
     upgradecapAddress: '0xb1ffbc2e1915f44b8f271a703becc1bf8aa79bc22431a58900a102892b783c25',//多签地址或单签地址
     ownershipType: OwnershipType.Single, // DAO
@@ -265,10 +265,10 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
   {
     name: 'Ember Protocol',
     logoUrl: 'Ember_Protocol.jpg',
-    contract: '0x4e1634d0001f22e24ca9fe2127aa49461ea3c320d4456c005b2ad86038b3f863',
+    contract: '0x8cdf6979baabf8c2f972d1be70a2008b12a238232264f579d9f626e723c75a9d',
     upgradecap: '0x298c2d3e0449655cb48b3d5599ea124bf47690e8eab175a7458c3d2ce3bdcefb',
     lastUpgradeDate: '2026-01-01',
-    version: 5,
+    version: 7,
     policy: UpgradePolicy.Compatible,
     upgradecapAddress: '0xe5e507ee4a78f51704ad6cce4f549c4878f0a73d8392d47ad87135bf11ff5af2',
     ownershipType: OwnershipType.Single,
@@ -490,10 +490,10 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
   {
     name: 'Full Sail',
     logoUrl: 'Full_Sail.jpg',
-    contract: '0xf7ca99f9fd82da76083a52ab56d88aff15d039b76499b85db8b8bc4d4804584a',
+    contract: '0x497a144ba3d93ae44d9fd23d4ff4761c329d87a505136d2269c743b2297fa881',
     upgradecap: '0x1e6089d13ca73185413e0f21020b9de06dbd2f6acc533c1b19061167ef6f70c2',
     lastUpgradeDate: '2026-01-01',
-    version: 3,
+    version: 4,
     policy: UpgradePolicy.Compatible,
     upgradecapAddress: '0xfed1c619fc8dd98367a0422ca9ef53c9825e2893d78dda822106d12687888fb3',
     ownershipType: OwnershipType.MultiSig,
@@ -558,10 +558,10 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
   {
     name: 'ZO',
     logoUrl: 'ZO.jpg',
-    contract: '0x60d75af192054ac52dce44b496f8d4c2ab27d4fd3dd0737aa69902b3170a78b7',
+    contract: '0x133f18548e87ae085905f3dd4c9d5be9b9ceb9a9bd2d55f34a0804eb249db1ae',
     upgradecap: '0x2092387c072fe18f91b57b9dde362f758259ee88d993a5faf569b4f2eb288b12',
     lastUpgradeDate: '2026-01-01',
-    version: 38,
+    version: 39,
     policy: UpgradePolicy.Compatible,
     upgradecapAddress: '0x9399c7f4aae1db1dfdea97d93f738e2fbef1f51e8ca015a456056ea951091bdc',
     ownershipType: OwnershipType.Single,

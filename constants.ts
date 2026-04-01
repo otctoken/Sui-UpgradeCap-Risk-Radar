@@ -110,10 +110,10 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
   {
     name: 'AlphaLend',
     logoUrl: "Alphafil.jpg",
-    contract: '0x5209a18e1ae6ac994dd5a188a2d8deb17b2bbab29f63a7b5457bdfe040f69f61',
+    contract: '0xce65b63c89f13c475fdf1c07f7e7c2520503049ede79d46022e0e410a53a5553',
     upgradecap: "0x208ee19bd0523bd1f3ea740a8057e82ba62ac544f70bcb008b0893660265355c",
     lastUpgradeDate: '2025-09-23',
-    version: 10,
+    version: 11,
     policy: UpgradePolicy.Compatible,
     upgradecapAddress: '0xa1eb94d1700652aa85b417b46fa6775575b8b98d3352d864fb5146eb45d335fb',//多签地址或单签地址
     ownershipType: OwnershipType.MultiSig, // DAO
@@ -615,7 +615,24 @@ export const MOCK_DAPPS: DAppRiskProfile[] = [
     isVerified: true,
     category: 'Defi|DEX',
   },
-
+  {
+    name: 'Current',
+    logoUrl: "current.png",
+    contract: '0xfe1d8929d13b00aaecd7642dec1c6d41cab82882a1b139efa46bf61dfd6380bf',
+    upgradecap: "0x897d3078973f6a51ba97deab837833959621dee745e019a9424ac7ac527c4ee3",
+    lastUpgradeDate: '2025-12-29',
+    version: 0,
+    policy: UpgradePolicy.Compatible,
+    upgradecapAddress: '0xfbe0602c6901ff987dd4de8e762698209b611dd983bdf5f011e2da2d3b9fd532',//多签地址或单签地址
+    ownershipType: OwnershipType.Dao, // DAO
+    customPolicyAddress: '0x6838d28171e2cd1bc8184b1a3c0f0a141eca60bed2ff927673dc3e0a94b6fbe8', // 策略合约地址
+    timelockAddressANFdfParentObject: '0xd2d3e35ff8f53c93f2481873633cb4c7cfe7ccb2534942a48a94baf691fdc968', //也就是PolicyOBJid
+    whetherDF: false,
+    timelockDurationSeconds: 86400, // 48 Hours
+    category: 'Defi|Yield',
+    isVerified: true,
+    // No controller address because it's immutable/burned
+  },
 
 
 ];

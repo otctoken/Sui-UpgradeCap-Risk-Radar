@@ -1,0 +1,20 @@
+{
+  "origin": "https://radar.dappnav.org",
+  "name": "Sui UpgradeCap Risk Radar",
+  "lang": "en",
+  "image": "/logo.png",
+  "pages": [
+    {
+      "path": "/",
+      "title": "Sui UpgradeCap Risk Radar — Package Upgrade Risk",
+      "description": "Explore Sui package upgrade risks: UpgradeCap ownership, upgrade policies and governance controls in one dashboard.",
+      "paragraphs": [
+        "Sui UpgradeCap Risk Radar helps you inspect how Sui packages can be upgraded and who controls the upgrade capability.",
+        "Explore the dashboard and scoring guide to understand ownership, upgrade policy and governance controls. Assessments are contextual signals, not a security audit or a guarantee of safety."
+      ],
+      "index": true
+    }
+  ],
+  "private": [],
+  "aliases": {}
+}
